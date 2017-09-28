@@ -404,17 +404,17 @@ class Ui_MainWindow(object):
        index = 0
        
        #------------------------------------------#    
-       if  self.Rash.isChecked():
+       if  self.AchingMuscles.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.AchingMuscles.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Fever.isChecked():
+       if  self.BodyAches.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Fever.isChecked()):
+       elif not(self.BodyAches.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
@@ -432,6 +432,103 @@ class Ui_MainWindow(object):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
+       if  self.ExtremeHunger.isChecked():
+           ResponseVector[index] = 1
+           index = index + 1
+       elif not(self.ExtremeHunger.isChecked()):
+           ResponseVector[index] = 0
+           index = index + 1
+       #------------------------------------------#
+       if  self.ExtremeThirst.isChecked():
+           ResponseVector[index] = 1
+           index = index + 1
+       elif not(self.ExtremeThirst.isChecked()):
+           ResponseVector[index] = 0
+           index = index + 1
+       #------------------------------------------#
+       if  self.Fever.isChecked():
+           ResponseVector[index] = 1
+           index = index + 1
+       elif not(self.Fever.isChecked()):
+           ResponseVector[index] = 0
+           index = index + 1
+       #------------------------------------------#
+       if  self.Irritation.isChecked():
+           ResponseVector[index] = 1
+           index = index + 1
+       elif not(self.Irritation.isChecked()):
+           ResponseVector[index] = 0
+           index = index + 1
+       #------------------------------------------#
+       if  self.LossOfEnergy.isChecked():
+           ResponseVector[index] = 1
+           index = index + 1
+       elif not(self.LossOfEnergy.isChecked()):
+           ResponseVector[index] = 0
+           index = index + 1
+       #------------------------------------------#
+       if  self.NightSweats.isChecked():
+           ResponseVector[index] = 1
+           index = index + 1
+       elif not(self.NightSweats.isChecked()):
+           ResponseVector[index] = 0
+           index = index + 1
+       #------------------------------------------#
+       if  self.NumbnessTingling.isChecked():
+           ResponseVector[index] = 1
+           index = index + 1
+       elif not(self.NumbnessTingling.isChecked()):
+           ResponseVector[index] = 0
+           index = index + 1
+       #------------------------------------------#
+       if  self.PeriodicPainFluctuatingIntensity.isChecked():
+           ResponseVector[index] = 1
+           index = index + 1
+       elif not(self.PeriodicPainFluctuatingIntensity.isChecked()):
+           ResponseVector[index] = 0
+           index = index + 1
+       #------------------------------------------#
+       if  self.PaleSkin.isChecked():
+           ResponseVector[index] = 1
+           index = index + 1
+       elif not(self.PaleSkin.isChecked()):
+           ResponseVector[index] = 0
+           index = index + 1
+       #------------------------------------------#
+       if  self.RaisedPinkRedBumps.isChecked():
+           ResponseVector[index] = 1
+           index = index + 1
+       elif not(self.RaisedPinkRedBumps.isChecked()):
+           ResponseVector[index] = 0
+           index = index + 1
+       #------------------------------------------#
+       if  self.Rash.isChecked():
+           ResponseVector[index] = 1
+           index = index + 1
+       elif not(self.Rash.isChecked()):
+           ResponseVector[index] = 0
+           index = index + 1
+       #------------------------------------------#
+       if  self.SmallFluidFilledBlisters.isChecked():
+           ResponseVector[index] = 1
+           index = index + 1
+       elif not(self.SmallFluidFilledBlisters.isChecked()):
+           ResponseVector[index] = 0
+           index = index + 1
+       #------------------------------------------#
+       if  self.ThrobbingPulsatingPain.isChecked():
+           ResponseVector[index] = 1
+           index = index + 1
+       elif not(self.ThrobbingPulsatingPain.isChecked()):
+           ResponseVector[index] = 0
+           index = index + 1
+       #------------------------------------------#
+       if  True:
+           ResponseVector[index] = 0
+           index = index + 1
+           # THIS IS THE ERROR TERM #
+       
+       #------------------------------------------#
        if  self.Vomiting.isChecked():
            ResponseVector[index] = 1
            index = index + 1
@@ -439,451 +536,353 @@ class Ui_MainWindow(object):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.Weakness.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.Weakness.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.WeightLoss.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.WeightLoss.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.BlockedNose.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.BlockedNose.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.BlurryVision.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.BlurryVision.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.BurningEyes.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.BurningEyes.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.Coughing.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.Coughing.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.CoughingBlood.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.CoughingBlood.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.DecreasedSenseOfTasteSmell.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.DecreasedSenseOfTasteSmell.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.DifficultyConcentrating.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.DifficultyConcentrating.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.Dizziness.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.Dizziness.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.Drooling.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.Drooling.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.FacialPain.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.FacialPain.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.Headaches.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.Headaches.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.IncreasedAsthmaticReactions.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.IncreasedAsthmaticReactions.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.IncreasedTears.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.IncreasedTears.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.Insomnia.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.Insomnia.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.ItchyEyes.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.ItchyEyes.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.LightSensitivity.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.LightSensitivity.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.NasalCongestion.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.NasalCongestion.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.Nausea.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.Nausea.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.NeckPain.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.NeckPain.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.PainOnOneSideOfHead.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.PainOnOneSideOfHead.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.BreathingPain.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.BreathingPain.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.PinkRedColorInWhitesEyes.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.PinkRedColorInWhitesEyes.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.RunnyNose.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.RunnyNose.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.ScratchyThroat.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.ScratchyThroat.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.ShortnessOfBreath.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.ShortnessOfBreath.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.SinusPressure.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.SinusPressure.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.SoreMouthMakesEatSleepDrinkHard.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.SoreMouthMakesEatSleepDrinkHard.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.SoreThroat.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.SoreThroat.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.SoundSensitivity.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.SoundSensitivity.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.SwollenLymphNodes.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.SwollenLymphNodes.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.SwollenBlueSkinUnderEyes.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.SwollenBlueSkinUnderEyes.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.UrgeToRubEyes.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.UrgeToRubEyes.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.VisionChanges.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.VisionChanges.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.VisualAura.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.VisualAura.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.Wheezing.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.Wheezing.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.BurningSensationUrinating.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.BurningSensationUrinating.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.CloudyFoulSmellingUrine.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.CloudyFoulSmellingUrine.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.LegCramp.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.LegCramp.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.PainWhenUrinating.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.PainWhenUrinating.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.PainRadiatesLowerAbdomenGroin.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.PainRadiatesLowerAbdomenGroin.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.PersistentNeedToUrinate.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.PersistentNeedToUrinate.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.PinkRedBrownUrine.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.PinkRedBrownUrine.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.FrequentUrination.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.FrequentUrination.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.UrinatingSmallAmount.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.UrinatingSmallAmount.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.ChestPain.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.ChestPain.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.LossOfAppetite.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.LossOfAppetite.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.PainInSideBackBelowRibs.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.PainInSideBackBelowRibs.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.Rash.isChecked():
+       if  self.RapidHeartBeat.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.Rash.isChecked()):
-           ResponseVector[index] = 0
-           index = index + 1
-       #------------------------------------------#
-       if  self.Rash.isChecked():
-           ResponseVector[index] = 1
-           index = index + 1
-       elif not(self.Rash.isChecked()):
-           ResponseVector[index] = 0
-           index = index + 1
-       #------------------------------------------#
-       if  self.Rash.isChecked():
-           ResponseVector[index] = 1
-           index = index + 1
-       elif not(self.Rash.isChecked()):
-           ResponseVector[index] = 0
-           index = index + 1
-       #------------------------------------------#
-       if  self.Rash.isChecked():
-           ResponseVector[index] = 1
-           index = index + 1
-       elif not(self.Rash.isChecked()):
-           ResponseVector[index] = 0
-           index = index + 1
-       #------------------------------------------#
-       if  self.Rash.isChecked():
-           ResponseVector[index] = 1
-           index = index + 1
-       elif not(self.Rash.isChecked()):
-           ResponseVector[index] = 0
-           index = index + 1
-       #------------------------------------------#
-       if  self.Rash.isChecked():
-           ResponseVector[index] = 1
-           index = index + 1
-       elif not(self.Rash.isChecked()):
-           ResponseVector[index] = 0
-           index = index + 1
-       #------------------------------------------#
-       if  self.Rash.isChecked():
-           ResponseVector[index] = 1
-           index = index + 1
-       elif not(self.Rash.isChecked()):
-           ResponseVector[index] = 0
-           index = index + 1
-       #------------------------------------------#
-       if  self.Rash.isChecked():
-           ResponseVector[index] = 1
-           index = index + 1
-       elif not(self.Rash.isChecked()):
-           ResponseVector[index] = 0
-           index = index + 1
-       #------------------------------------------#
-       if  self.Rash.isChecked():
-           ResponseVector[index] = 1
-           index = index + 1
-       elif not(self.Rash.isChecked()):
-           ResponseVector[index] = 0
-           index = index + 1
-       #------------------------------------------#
-       if  self.Rash.isChecked():
-           ResponseVector[index] = 1
-           index = index + 1
-       elif not(self.Rash.isChecked()):
-           ResponseVector[index] = 0
-           index = index + 1
-       #------------------------------------------#
-       if  self.Rash.isChecked():
-           ResponseVector[index] = 1
-           index = index + 1
-       elif not(self.Rash.isChecked()):
-           ResponseVector[index] = 0
-           index = index + 1
-       #------------------------------------------#
-       if  self.Rash.isChecked():
-           ResponseVector[index] = 1
-           index = index + 1
-       elif not(self.Rash.isChecked()):
-           ResponseVector[index] = 0
-           index = index + 1
-       #------------------------------------------#
-       if  self.Rash.isChecked():
-           ResponseVector[index] = 1
-           index = index + 1
-       elif not(self.Rash.isChecked()):
-           ResponseVector[index] = 0
-           index = index + 1
-       #------------------------------------------#
-       if  self.Rash.isChecked():
-           ResponseVector[index] = 1
-           index = index + 1
-       elif not(self.Rash.isChecked()):
-           ResponseVector[index] = 0
-           index = index + 1
-       #------------------------------------------#
-       if  self.Rash.isChecked():
-           ResponseVector[index] = 1
-           index = index + 1
-       elif not(self.Rash.isChecked()):
+       elif not(self.RapidHeartBeat.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
