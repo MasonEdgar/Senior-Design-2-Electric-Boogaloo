@@ -163,9 +163,9 @@ class Ui_MainWindow(object):
         self.BlurryVision = QtWidgets.QCheckBox(self.Head)
         self.BlurryVision.setGeometry(QtCore.QRect(260, 70, 81, 17))
         self.BlurryVision.setObjectName("BlurryVision")
-        self.SinusPressue = QtWidgets.QCheckBox(self.Head)
-        self.SinusPressue.setGeometry(QtCore.QRect(350, 10, 91, 17))
-        self.SinusPressue.setObjectName("SinusPressue")
+        self.SinusPressure = QtWidgets.QCheckBox(self.Head)
+        self.SinusPressure.setGeometry(QtCore.QRect(350, 10, 91, 17))
+        self.SinusPressure.setObjectName("SinusPressure")
         self.VisionChanges = QtWidgets.QCheckBox(self.Head)
         self.VisionChanges.setGeometry(QtCore.QRect(350, 30, 101, 17))
         self.VisionChanges.setObjectName("VisionChanges")
@@ -359,7 +359,7 @@ class Ui_MainWindow(object):
         self.BlockedNose.setText(_translate("MainWindow", "Blocked Nose"))
         self.BurningEyes.setText(_translate("MainWindow", "Burning Eyes"))
         self.BlurryVision.setText(_translate("MainWindow", "Blurry Vision"))
-        self.SinusPressue.setText(_translate("MainWindow", "Sinus Pressure"))
+        self.SinusPressure.setText(_translate("MainWindow", "Sinus Pressure"))
         self.VisionChanges.setText(_translate("MainWindow", "Vision Changes"))
         self.NasalCongestion.setText(_translate("MainWindow", "Nasal Congestion"))
         self.ScratchyThroat.setText(_translate("MainWindow", "Scratchy Throat"))
@@ -732,10 +732,10 @@ class Ui_MainWindow(object):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-       if  self.SoreMouthMakesEatSleepDrinkHard.isChecked():
+       if  self.SoreMouthMakesEatDrinkSleepHard.isChecked():
            ResponseVector[index] = 1
            index = index + 1
-       elif not(self.SoreMouthMakesEatSleepDrinkHard.isChecked()):
+       elif not(self.SoreMouthMakesEatDrinkSleepHard.isChecked()):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
