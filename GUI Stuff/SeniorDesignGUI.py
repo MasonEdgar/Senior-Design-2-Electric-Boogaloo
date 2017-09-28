@@ -14,8 +14,11 @@ Ermias (Jeremy) Kebede
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QFileDialog, QLineEdit
+import numpy as np
 
-ResponseVector = [None] * 69
+
+ResponseVector = np.empty(shape=69, dtype=int, order='C')
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -396,367 +399,497 @@ class Ui_MainWindow(object):
 
 
     def ConfirmFunction(self):
+        
+       global ResponseVector
+       index = 0
+       
        #------------------------------------------#    
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Fever.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Fever.isChecked()):
-           ResponseVector(1) = 1
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Chills.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Chills.isChecked()):
-           ResponseVector(1) = 1
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Fatigue.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Fatigue.isChecked()):
-           ResponseVector(1) = 1
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Vomiting.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Vomiting.isChecked()):
-           ResponseVector(1) = 1
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
        if  self.Rash.isChecked():
-           ResponseVector(1) = 1
+           ResponseVector[index] = 1
+           index = index + 1
        elif not(self.Rash.isChecked()):
-           ResponseVector(1) = 0
+           ResponseVector[index] = 0
+           index = index + 1
        #------------------------------------------#
+
        
 
-
-
-       
-
-       
-       
-      
-           
-           
-           
-           
-           
-           
            
 
 if __name__ == "__main__":
