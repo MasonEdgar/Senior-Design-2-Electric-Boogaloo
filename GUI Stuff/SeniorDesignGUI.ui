@@ -1,0 +1,1113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>753</width>
+    <height>619</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: white;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>210</y>
+      <width>751</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="GeneralBody">
+     <attribute name="title">
+      <string>General Body</string>
+     </attribute>
+     <widget class="QCheckBox" name="Rash">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>51</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Rash</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="Fever">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>51</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Fever</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="Chills">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>51</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Chills</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="Fatigue">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>61</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Fatigue</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="Vomiting">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Vomiting</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="Weakness">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Weakness</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="PaleSkin">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>130</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Pale Skin</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="BodyAches">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>150</y>
+        <width>81</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Body Aches</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="Irritation">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>170</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Irritation</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="WeightLoss">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>10</y>
+        <width>81</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Weight Loss</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="NightSweats">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>30</y>
+        <width>91</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Night Sweats</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="NumbnessTingling">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>130</y>
+        <width>111</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Numbness/Tingling</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="LossOfEnergy">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>70</y>
+        <width>101</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Loss of Energy</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="AchingMuscles">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>50</y>
+        <width>91</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Aching Muscles</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="SmallFluidFilledBlisters">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>10</y>
+        <width>141</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Small Fluid-Filled Blisters</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="ExtremeHunger">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>90</y>
+        <width>101</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Extreme Hunger</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="ExtremeThirst">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>110</y>
+        <width>101</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Extreme Thirst</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="RaisedPinkRedBumps">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>150</y>
+        <width>141</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Raised Pink/Red Bumps</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="ThrobbingPulsatingPain">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>170</y>
+        <width>141</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Throbbing/Pulsating Pain</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="PeriodicPainFluctuatingIntensity">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>30</y>
+        <width>211</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Periodic Pain With Fluctuating Intensity</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Head">
+     <attribute name="title">
+      <string>Head</string>
+     </attribute>
+     <widget class="QCheckBox" name="Nausea">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>61</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nausea</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="Coughing">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Coughing</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="Drooling">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Drooling</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="Insomnia">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Insomnia</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="Wheezing">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>10</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Wheezing</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="Dizziness">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>30</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Dizziness</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="Headaches">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>50</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Headaches</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="NeckPain">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>70</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Neck Pain</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="ItchyEyes">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>10</y>
+        <width>81</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Itchy Eyes</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="RunnyNose">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>30</y>
+        <width>81</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Runny Nose</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="FacialPain">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>50</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Facial Pain</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="SoreThroat">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>70</y>
+        <width>81</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sore Throat</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="VisualAura">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>10</y>
+        <width>81</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Visual Aura</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="BlockedNose">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>30</y>
+        <width>81</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Blocked Nose</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="BurningEyes">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>50</y>
+        <width>91</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Burning Eyes</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="BlurryVision">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>70</y>
+        <width>81</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Blurry Vision</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="SinusPressue">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>10</y>
+        <width>91</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sinus Pressure</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="VisionChanges">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>30</y>
+        <width>101</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Vision Changes</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="NasalCongestion">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>70</y>
+        <width>101</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nasal Congestion</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="ScratchyThroat">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>50</y>
+        <width>101</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Scratchy Throat</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="CoughingBlood">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>10</y>
+        <width>111</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Coughing blood</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="LightSensitivity">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>30</y>
+        <width>101</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Light Sensitivity</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="SoundSensitivity">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>50</y>
+        <width>101</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sound Sensitivity</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="BreathingPain">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>70</y>
+        <width>101</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Breathing Pain</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="ShortnessOfBreath">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>10</y>
+        <width>121</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Shortness of Breath</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="UrgeToRubEyes">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>30</y>
+        <width>111</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Urge to Rub Eyes</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="DifficultyConcentrating">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>50</y>
+        <width>141</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Difficulty Concentrating</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="IncreasedTears">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>70</y>
+        <width>151</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Increased Tear Production</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="SwollenLymphNodes">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>100</y>
+        <width>161</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Swollen Lymph Nodes in Neck</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="PainOnOneSideOfHead">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>100</y>
+        <width>171</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pain On One Side of The Head</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="IncreasedAsthmaticReactions">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>100</y>
+        <width>171</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Increased Asthmatic Reactions</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="DecreasedSenseOfTasteSmell">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>100</y>
+        <width>191</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Decreased Sense of Taste or Smell</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="PinkRedColorInWhitesEyes">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>120</y>
+        <width>201</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pink/Red Color In the Whites of Eyes</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="SwollenBlueSkinUnderEyes">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>140</y>
+        <width>231</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Swollen, bluish colored skin below the eyes</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="SoreMouthMakesEatDrinkSleepHard">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>160</y>
+        <width>291</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sore Mouth That Complicates Sleeping, Eating, Drinking</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Torso">
+     <attribute name="title">
+      <string>Torso</string>
+     </attribute>
+     <widget class="QCheckBox" name="ChestPain">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>70</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Chest Pain</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="LossOfAppetite">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>141</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Loss of Appetite</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="RapidHeartBeat">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>121</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Rapid Heart Beat</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="PainInSideBackBelowRibs">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>261</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Severe Pain In The Side and Back, Below the Ribs</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="LowerBody">
+     <attribute name="title">
+      <string>Lower Body</string>
+     </attribute>
+     <widget class="QCheckBox" name="LegCramp">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>70</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Leg Cramps</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="FrequentUrination">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>121</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Frequent Urination</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="PainWhenUrinating">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>151</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pain When Urinating</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="UrinatingSmallAmount">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>141</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Urinating Small Amounts</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="PinkRedBrownUrine">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>131</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pink/Red/Brown Urine</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="PersistentNeedToUrinate">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>151</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Persistent Need to Urinate</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="CloudyFoulSmellingUrine">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>130</y>
+        <width>151</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Cloudy/Foul Smelling Urine</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="BurningSensationUrinating">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>150</y>
+        <width>191</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Burning Sensation When Urinating</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="PainRadiatesLowerAbdomenGroin">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>170</y>
+        <width>261</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pain That Radiates To The Lower Abdomen/Groin</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>490</y>
+      <width>211</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>520</y>
+      <width>211</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_3">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>550</y>
+      <width>211</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>450</y>
+      <width>241</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Cambria</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Differential Diagnosis</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ConfirmButton">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>430</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(85, 255, 255)</string>
+    </property>
+    <property name="text">
+     <string>Confirm</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>30</y>
+      <width>321</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>SD_Logo.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>753</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
