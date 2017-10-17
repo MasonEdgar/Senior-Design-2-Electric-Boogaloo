@@ -1,6 +1,7 @@
 import pdb
 
 print('Reading in of Data...')
+print('random stuff...')
 
 # read in data
 import csv
@@ -13,7 +14,7 @@ illnessList = [] # list of illnesses
 dataMatrix = [] # logical matrix
 responseVector = []
 
-print('Converting response vector -> numpy vector')    
+print('Converting response vector -> numpy vector')
 
 with open('SymptomList.csv', 'r') as file:
     read = csv.reader(file)
@@ -29,13 +30,13 @@ for number in range(len(symptoms)):
 with open('IllnessesMatrix.csv','r') as file:
     read = csv.reader(file)
     count = 0
-    for line in read:  
+    for line in read:
         illnessMatrix.append(line)
     for illness in illnessMatrix:
         count = count + 1
-        
-    
+
+
     #dataMatrix = np.asarray(dataMatrix)
-        
+
 #print(illnessMatrix)
 #print(illnessMatrix[1][1:69])
