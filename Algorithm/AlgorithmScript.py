@@ -23,6 +23,9 @@ with open('SymptomList.csv', 'r') as file:
 for number in range(len(symptoms)):
     responseVector.append(randint(0,1))
 
+# set the ERROR term to 0
+responseVector[17] = 0
+
 # conversion to numpy array/vector
 responseVector = np.asarray(responseVector).astype('int')
 
@@ -52,4 +55,9 @@ print(illnessDict)
 #     maxIllness = max(illnessDict.iteritems(), key = operator.itemgetter(1))[0]
 #     differentialDiag.append(maxIllness)
 #     illnessDict.pop(maxIllness, None)
+
+# sorting of dictionary from greatest to least
+sortedIllnessList = sorted(illnessDict, key=illnessDict.get, reverse=True)
+for illness in sortedIllnessList:
+    print(illness, illnessDict[illness])
 
