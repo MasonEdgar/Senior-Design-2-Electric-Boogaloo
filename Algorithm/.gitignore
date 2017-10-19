@@ -1,0 +1,8 @@
+# ignore xlsx sheets...
+*.xlsx
+
+# ignore .idea/
+.idea/
+
+# ignore ReferenceByBodyPart.csv
+ReferenceByBodyPart.csv
