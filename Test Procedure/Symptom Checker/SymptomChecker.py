@@ -30,12 +30,12 @@ AnemiaSymptoms = np.zeros(shape=10, dtype=int, order='C')
 BronchitisSymptoms = np.zeros(shape=11, dtype=int, order='C')
 ColdSoreSymptoms = np.zeros(shape=5, dtype=int, order='C')
 ConjunctivitisSymptoms = np.zeros(shape=8, dtype=int, order='C')
-DiabetesSymptoms = np.zeros(shape=7, dtype=int, order='C')
+DiabetesSymptoms = np.zeros(shape=6, dtype=int, order='C')
 ChickenpoxSymptoms = np.zeros(shape=8, dtype=int, order='C')
 KidneyStonesSymptoms = np.zeros(shape=14, dtype=int, order='C')
 MigrainesSymptoms = np.zeros(shape=15, dtype=int, order='C')
 PollenAllergySymptoms = np.zeros(shape=10, dtype=int, order='C')
-TuberculosisSymptoms = np.zeros(shape=11, dtype=int, order='C')
+TuberculosisSymptoms = np.zeros(shape=10, dtype=int, order='C')
 
 
 #-------- Symptom Count and Log ---------#
