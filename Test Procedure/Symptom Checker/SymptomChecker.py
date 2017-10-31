@@ -26,3 +26,21 @@ Migraines = illness_matrix[7]
 PollenAllergy = illness_matrix[8]
 Tuberculosis = illness_matrix[9]
 
+AnemiaSymptoms = np.zeros(shape=10, dtype=int, order='C')
+
+count = 0
+index = 0
+
+for x in Anemia:
+    
+    if x == 1:
+        AnemiaSymptoms[index] = count
+        index = index + 1
+        count = count + 1
+    elif x == 0:
+        count = count+1
+        
+        
+
+
+
