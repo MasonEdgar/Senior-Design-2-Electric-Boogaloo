@@ -27,6 +27,19 @@ PollenAllergy = illness_matrix[8]
 Tuberculosis = illness_matrix[9]
 
 AnemiaSymptoms = np.zeros(shape=10, dtype=int, order='C')
+BronchitisSymptoms = np.zeros(shape=11, dtype=int, order='C')
+ColdSoreSymptoms = np.zeros(shape=5, dtype=int, order='C')
+ConjunctivitisSymptoms = np.zeros(shape=8, dtype=int, order='C')
+DiabetesSymptoms = np.zeros(shape=7, dtype=int, order='C')
+ChickenpoxSymptoms = np.zeros(shape=8, dtype=int, order='C')
+KidneyStonesSymptoms = np.zeros(shape=14, dtype=int, order='C')
+MigrainesSymptoms = np.zeros(shape=15, dtype=int, order='C')
+PollenAllergySymptoms = np.zeros(shape=10, dtype=int, order='C')
+TuberculosisSymptoms = np.zeros(shape=11, dtype=int, order='C')
+
+
+#-------- Symptom Count and Log ---------#
+
 
 count = 0
 index = 0
@@ -39,8 +52,122 @@ for x in Anemia:
         count = count + 1
     elif x == 0:
         count = count+1
-        
-        
+#----------------------------------------#    
 
+count = 0
+index = 0
 
+for x in Bronchitis:
+    
+    if x == 1:
+        BronchitisSymptoms[index] = count
+        index = index + 1
+        count = count + 1
+    elif x == 0:
+        count = count+1
+#----------------------------------------#  
+
+count = 0
+index = 0
+
+for x in ColdSore:
+    
+    if x == 1:
+        ColdSoreSymptoms[index] = count
+        index = index + 1
+        count = count + 1
+    elif x == 0:
+        count = count+1
+#----------------------------------------#  
+
+count = 0
+index = 0
+
+for x in Conjunctivitis:
+    
+    if x == 1:
+        ConjunctivitisSymptoms[index] = count
+        index = index + 1
+        count = count + 1
+    elif x == 0:
+        count = count+1
+#----------------------------------------#  
+
+count = 0
+index = 0
+
+for x in Diabetes:
+    
+    if x == 1:
+        DiabetesSymptoms[index] = count
+        index = index + 1
+        count = count + 1
+    elif x == 0:
+        count = count+1
+#----------------------------------------#  
+
+count = 0
+index = 0
+
+for x in Chickenpox:
+    
+    if x == 1:
+        ChickenpoxSymptoms[index] = count
+        index = index + 1
+        count = count + 1
+    elif x == 0:
+        count = count+1
+#----------------------------------------#  
+
+count = 0
+index = 0
+
+for x in KidneyStones:
+    
+    if x == 1:
+        KidneyStonesSymptoms[index] = count
+        index = index + 1
+        count = count + 1
+    elif x == 0:
+        count = count+1
+#----------------------------------------#  
+
+count = 0
+index = 0
+
+for x in Migraines:
+    
+    if x == 1:
+        MigrainesSymptoms[index] = count
+        index = index + 1
+        count = count + 1
+    elif x == 0:
+        count = count+1
+#----------------------------------------#  
+
+count = 0
+index = 0
+
+for x in PollenAllergy:
+    
+    if x == 1:
+        PollenAllergySymptoms[index] = count
+        index = index + 1
+        count = count + 1
+    elif x == 0:
+        count = count+1
+#----------------------------------------#  
+
+count = 0
+index = 0
+
+for x in Tuberculosis:
+    
+    if x == 1:
+        TuberculosisSymptoms[index] = count
+        index = index + 1
+        count = count + 1
+    elif x == 0:
+        count = count+1
+#----------------------------------------#  
 
