@@ -171,3 +171,18 @@ for x in Tuberculosis:
         count = count+1
 #----------------------------------------#  
 
+
+
+
+#------- STAGE 1 ----------#
+
+count = 0 
+
+NewAnemia = np.copy(Anemia)
+
+NewAnemia[AnemiaSymptoms[count]] = 0
+
+## Send NewAnemia to algorithm for processing ## 
+
+
+
