@@ -60,4 +60,3 @@ print(illnessDict)
 sortedIllnessList = sorted(illnessDict, key=illnessDict.get, reverse=True)
 for illness in sortedIllnessList:
     print(illness, illnessDict[illness])
-
