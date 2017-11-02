@@ -15,7 +15,6 @@ TestArray = np.ones(shape=10, dtype=int, order='C')
 IndexArray = np.zeros(shape=10, dtype=int, order='C')
 
 count = 0 
-var = 9
 
 
 # TestArray.shape[0] gets the size of the 1-D array 
@@ -68,10 +67,10 @@ for x in NewList:
 
 
 
-stage = 1
-count = 0 
-
-NewList = list(iter.combinations(IndexArray, stage))   
+#stage = 1
+#count = 0 
+#
+#NewList = list(iter.combinations(IndexArray, stage))   
 
 '''
 for x in NewList:
@@ -107,7 +106,7 @@ for x in NewList:
  
 stage = 1
 
-while(stage <= TestArray.shape[0]):
+while(stage <= IndexArray.shape[0]):
     
     count = 0
     

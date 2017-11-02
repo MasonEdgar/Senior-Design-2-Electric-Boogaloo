@@ -8,6 +8,7 @@ Senior Captson 2017
 
 import numpy as np
 import pandas as pd
+import itertools as iter
 
 
 df = pd.read_excel('/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Illness Matrix Barebones .xlsx')
@@ -176,10 +177,68 @@ for x in Tuberculosis:
 
 #------- STAGE 1 ----------#
 
-count = 0 
+#count = 0 
 
 NewAnemia = np.copy(Anemia)
 
-NewAnemia[AnemiaSymptoms[count]] = 0
+#NewAnemia[AnemiaSymptoms[count]] = 0
 
 ## Send NewAnemia to algorithm for processing ## 
+
+
+
+stage = 1
+count = 0
+
+
+while(stage <= AnemiaSymptoms.shape[0]-8):
+    
+    count = 0
+    
+    NewList = list(iter.combinations(AnemiaSymptoms, stage)) 
+    
+    for item in range(len(NewList)):
+        i = 0    
+        while(i < stage):
+            NewAnemia[NewList[count][i]] = 0
+            i = i + 1
+        print(NewAnemia)
+        print("")
+        print("")
+        
+        i = 0    
+        while(i < stage):
+            NewAnemia[NewList[count][i]] = 1
+            i = i + 1
+        count = count + 1       
+        
+    stage = stage + 1
+    print("")
+    print("")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
