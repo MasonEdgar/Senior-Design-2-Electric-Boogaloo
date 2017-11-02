@@ -1,15 +1,15 @@
 '''
-
 Author: Mason Edgar
 Symptom Checking Algorithm for the PMDK
 University of Houston 
 Senior Captson 2017
-
-
 '''
+
 
 import numpy as np
 import pandas as pd
+
+
 df = pd.read_excel('/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Illness Matrix Barebones .xlsx')
 illness_matrix = df.as_matrix()
 
@@ -183,6 +183,3 @@ NewAnemia = np.copy(Anemia)
 NewAnemia[AnemiaSymptoms[count]] = 0
 
 ## Send NewAnemia to algorithm for processing ## 
-
-
-
