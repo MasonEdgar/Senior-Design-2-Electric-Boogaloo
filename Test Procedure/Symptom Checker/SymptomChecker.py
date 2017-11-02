@@ -1,8 +1,10 @@
 '''
+
 Author: Mason Edgar
 Symptom Checking Algorithm for the PMDK
 University of Houston 
 Senior Captson 2017
+
 '''
 
 
@@ -175,23 +177,16 @@ for x in Tuberculosis:
 
 
 
-#------- STAGE 1 ----------#
+#--------------------- Anemia Block ------------------------#
 
-#count = 0 
 
 NewAnemia = np.copy(Anemia)
-
-#NewAnemia[AnemiaSymptoms[count]] = 0
-
-## Send NewAnemia to algorithm for processing ## 
-
-
 
 stage = 1
 count = 0
 
 
-while(stage <= AnemiaSymptoms.shape[0]-8):
+while(stage <= AnemiaSymptoms.shape[0]-9):
     
     count = 0
     
@@ -202,9 +197,13 @@ while(stage <= AnemiaSymptoms.shape[0]-8):
         while(i < stage):
             NewAnemia[NewList[count][i]] = 0
             i = i + 1
+            
+        #------ Algorithm Goes Here ------#    
+        
         print(NewAnemia)
         print("")
-        print("")
+        
+        #---------------------------------#
         
         i = 0    
         while(i < stage):
@@ -213,10 +212,8 @@ while(stage <= AnemiaSymptoms.shape[0]-8):
         count = count + 1       
         
     stage = stage + 1
-    print("")
-    print("")
-
-
+    
+#----------------------------------------------------------#
 
 
 
