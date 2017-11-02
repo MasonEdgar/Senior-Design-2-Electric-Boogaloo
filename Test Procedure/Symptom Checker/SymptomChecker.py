@@ -2,8 +2,8 @@
 
 Author: Mason Edgar
 Symptom Checking Algorithm for the PMDK
-University of Houston 
-Senior Captson 2017
+University of Houston | ECE
+Senior Captsone - 2017
 
 '''
 
