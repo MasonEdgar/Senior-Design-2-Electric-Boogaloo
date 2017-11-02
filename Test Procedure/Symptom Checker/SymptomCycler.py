@@ -81,16 +81,50 @@ for x in NewList:
     count = count + 1
 '''
 
+
+
+'''
 count = 0 
-stage = stage + 1
+stage = 3
 
 NewList = list(iter.combinations(IndexArray, stage)) 
 
 for x in NewList:
-    NewTestArray[IndexArray[NewList[count][stage-2]]] = 0
-    NewTestArray[IndexArray[NewList[count][stage-1]]] = 0
+    i = 0    
+    while(i < stage):
+        NewTestArray[IndexArray[NewList[count][i]]] = 0
+        i = i + 1
     print(NewTestArray)
-    NewTestArray[IndexArray[NewList[count][stage-2]]] = 1
-    NewTestArray[IndexArray[NewList[count][stage-1]]] = 1
+    i = 0    
+    while(i < stage):
+        NewTestArray[IndexArray[NewList[count][i]]] = 1
+        i = i + 1
     count = count + 1
     
+'''
+
+
+ 
+stage = 1
+
+while(stage <= TestArray.shape[0]):
+    
+    count = 0
+    
+    NewList = list(iter.combinations(IndexArray, stage)) 
+    
+    for x in NewList:
+        i = 0    
+        while(i < stage):
+            NewTestArray[IndexArray[NewList[count][i]]] = 0
+            i = i + 1
+        print(NewTestArray)
+        i = 0    
+        while(i < stage):
+            NewTestArray[IndexArray[NewList[count][i]]] = 1
+            i = i + 1
+        count = count + 1       
+        
+    stage = stage + 1
+    print("")
+    print("")
