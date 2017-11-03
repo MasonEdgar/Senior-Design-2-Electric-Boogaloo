@@ -10,6 +10,7 @@ Senior Capstone - 2017
 
 import numpy as np
 import pandas as pd
+from openpyxl import load_workbook
 import itertools as iter
 
 
@@ -184,6 +185,7 @@ NewAnemia = np.copy(Anemia)
 
 stage = 1
 count = 0
+row = 0
 
 
 while(stage <= AnemiaSymptoms.shape[0]):
@@ -191,6 +193,15 @@ while(stage <= AnemiaSymptoms.shape[0]):
     count = 0
     
     NewList = list(iter.combinations(AnemiaSymptoms, stage)) 
+    df = pd.DataFrame(NewList)
+    book = load_workbook("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx")
+    writer = pd.ExcelWriter("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx", engine="openpyxl")
+    writer.book = book
+    writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
+    df.to_excel(writer, sheet_name = 'Anemia', index=False, header=False, startrow=row)
+    row += len(NewList) + 1
+    writer.save()
+    
     
     for item in range(len(NewList)):
         i = 0    
@@ -200,8 +211,18 @@ while(stage <= AnemiaSymptoms.shape[0]):
             
         #------ Algorithm Goes Here ------#    
         
-        print(NewAnemia)
-        print("")
+#        df = pd.DataFrame(NewAnemia)
+#        df = pd.DataFrame.transpose(df)
+
+#        df = pd.DataFrame(NewList)
+#        
+#        book = load_workbook("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx")
+#        writer = pd.ExcelWriter("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx", engine="openpyxl")
+#        writer.book = book
+#        writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
+#        df.to_excel(writer, sheet_name = 'Anemia', index=False, header=False, startrow=row)
+#        row = row + 1
+#        writer.save()
         
         #---------------------------------#
         
@@ -216,7 +237,7 @@ while(stage <= AnemiaSymptoms.shape[0]):
 #----------------------------------------------------------#
 
 
-
+'''
 #--------------------- Bronchitis Block --------------------------#
 
 
@@ -587,3 +608,4 @@ while(stage <= TuberculosisSymptoms.shape[0]):
     
 #---------------------------------------------------------------------#
 
+'''
