@@ -270,8 +270,8 @@ while(stage <= BronchitisSymptoms.shape[0]):
             
         #------ Algorithm Goes Here ------#    
         
-        print(NewBronchitis)
-        print("")
+#        print(NewBronchitis)
+#        print("")
         
         #---------------------------------#
         
@@ -321,8 +321,8 @@ while(stage <= ColdSoreSymptoms.shape[0]):
             
         #------ Algorithm Goes Here ------#    
         
-        print(NewColdSore)
-        print("")
+#        print(NewColdSore)
+#        print("")
         
         #---------------------------------#
         
@@ -370,8 +370,8 @@ while(stage <= ConjunctivitisSymptoms.shape[0]):
             
         #------ Algorithm Goes Here ------#    
         
-        print(NewConjunctivitis)
-        print("")
+#        print(NewConjunctivitis)
+#        print("")
         
         #---------------------------------#
         
@@ -420,8 +420,8 @@ while(stage <= DiabetesSymptoms.shape[0]):
             
         #------ Algorithm Goes Here ------#    
         
-        print(NewDiabetes)
-        print("")
+#        print(NewDiabetes)
+#        print("")
         
         #---------------------------------#
         
@@ -470,8 +470,8 @@ while(stage <= ChickenpoxSymptoms.shape[0]):
             
         #------ Algorithm Goes Here ------#    
         
-        print(NewChickenpox)
-        print("")
+#        print(NewChickenpox)
+#        print("")
         
         #---------------------------------#
         
@@ -520,8 +520,8 @@ while(stage <= KidneyStonesSymptoms.shape[0]):
             
         #------ Algorithm Goes Here ------#    
         
-        print(NewKidneyStones)
-        print("")
+#        print(NewKidneyStones)
+#        print("")
         
         #---------------------------------#
         
@@ -570,8 +570,8 @@ while(stage <= MigrainesSymptoms.shape[0]):
             
         #------ Algorithm Goes Here ------#    
         
-        print(NewMigraines)
-        print("")
+#        print(NewMigraines)
+#        print("")
         
         #---------------------------------#
         
@@ -619,8 +619,8 @@ while(stage <= PollenAllergySymptoms.shape[0]):
             
         #------ Algorithm Goes Here ------#    
         
-        print(NewPollenAllergy)
-        print("")
+#        print(NewPollenAllergy)
+#        print("")
         
         #---------------------------------#
         
@@ -668,8 +668,8 @@ while(stage <= TuberculosisSymptoms.shape[0]):
             
         #------ Algorithm Goes Here ------#    
         
-        print(NewTuberculosis)
-        print("")
+#        print(NewTuberculosis)
+#        print("")
         
         #---------------------------------#
         
