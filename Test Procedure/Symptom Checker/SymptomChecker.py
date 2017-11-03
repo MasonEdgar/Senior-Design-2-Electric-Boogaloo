@@ -237,7 +237,7 @@ while(stage <= AnemiaSymptoms.shape[0]):
 #----------------------------------------------------------#
 
 
-'''
+
 #--------------------- Bronchitis Block --------------------------#
 
 
@@ -245,13 +245,22 @@ NewBronchitis = np.copy(Bronchitis)
 
 stage = 1
 count = 0
+row = 0
 
 
 while(stage <= BronchitisSymptoms.shape[0]):
     
     count = 0
     
-    NewList = list(iter.combinations(BronchitisSymptoms, stage)) 
+    NewList = list(iter.combinations(BronchitisSymptoms, stage))
+    df = pd.DataFrame(NewList)
+    book = load_workbook("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx")
+    writer = pd.ExcelWriter("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx", engine="openpyxl")
+    writer.book = book
+    writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
+    df.to_excel(writer, sheet_name = 'Bronchitis', index=False, header=False, startrow=row)
+    row += len(NewList) + 1
+    writer.save()
     
     for item in range(len(NewList)):
         i = 0    
@@ -286,13 +295,23 @@ NewColdSore = np.copy(ColdSore)
 
 stage = 1
 count = 0
+row = 0
 
 
 while(stage <= ColdSoreSymptoms.shape[0]):
     
     count = 0
     
-    NewList = list(iter.combinations(ColdSoreSymptoms, stage)) 
+    NewList = list(iter.combinations(ColdSoreSymptoms, stage))
+    df = pd.DataFrame(NewList)
+    book = load_workbook("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx")
+    writer = pd.ExcelWriter("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx", engine="openpyxl")
+    writer.book = book
+    writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
+    df.to_excel(writer, sheet_name = 'Cold Sore', index=False, header=False, startrow=row)
+    row += len(NewList) + 1
+    writer.save()
+    
     
     for item in range(len(NewList)):
         i = 0    
@@ -327,13 +346,21 @@ NewConjunctivitis = np.copy(Conjunctivitis)
 
 stage = 1
 count = 0
-
+row = 0 
 
 while(stage <= ConjunctivitisSymptoms.shape[0]):
     
     count = 0
     
-    NewList = list(iter.combinations(ConjunctivitisSymptoms, stage)) 
+    NewList = list(iter.combinations(ConjunctivitisSymptoms, stage))
+    df = pd.DataFrame(NewList)
+    book = load_workbook("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx")
+    writer = pd.ExcelWriter("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx", engine="openpyxl")
+    writer.book = book
+    writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
+    df.to_excel(writer, sheet_name = 'Conjunctivitis', index=False, header=False, startrow=row)
+    row += len(NewList) + 1
+    writer.save()
     
     for item in range(len(NewList)):
         i = 0    
@@ -369,13 +396,21 @@ NewDiabetes = np.copy(Diabetes)
 
 stage = 1
 count = 0
-
+row = 0 
 
 while(stage <= DiabetesSymptoms.shape[0]):
     
     count = 0
     
     NewList = list(iter.combinations(DiabetesSymptoms, stage)) 
+    df = pd.DataFrame(NewList)
+    book = load_workbook("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx")
+    writer = pd.ExcelWriter("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx", engine="openpyxl")
+    writer.book = book
+    writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
+    df.to_excel(writer, sheet_name = 'Diabetes', index=False, header=False, startrow=row)
+    row += len(NewList) + 1
+    writer.save()
     
     for item in range(len(NewList)):
         i = 0    
@@ -411,13 +446,21 @@ NewChickenpox = np.copy(Chickenpox)
 
 stage = 1
 count = 0
-
+row = 0 
 
 while(stage <= ChickenpoxSymptoms.shape[0]):
     
     count = 0
     
     NewList = list(iter.combinations(ChickenpoxSymptoms, stage)) 
+    df = pd.DataFrame(NewList)
+    book = load_workbook("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx")
+    writer = pd.ExcelWriter("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx", engine="openpyxl")
+    writer.book = book
+    writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
+    df.to_excel(writer, sheet_name = 'Chickenpox', index=False, header=False, startrow=row)
+    row += len(NewList) + 1
+    writer.save()
     
     for item in range(len(NewList)):
         i = 0    
@@ -453,13 +496,21 @@ NewKidneyStones = np.copy(KidneyStones)
 
 stage = 1
 count = 0
-
+row = 0 
 
 while(stage <= KidneyStonesSymptoms.shape[0]):
     
     count = 0
     
     NewList = list(iter.combinations(KidneyStonesSymptoms, stage)) 
+    df = pd.DataFrame(NewList)
+    book = load_workbook("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx")
+    writer = pd.ExcelWriter("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx", engine="openpyxl")
+    writer.book = book
+    writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
+    df.to_excel(writer, sheet_name = 'Kidney Stones', index=False, header=False, startrow=row)
+    row += len(NewList) + 1
+    writer.save()
     
     for item in range(len(NewList)):
         i = 0    
@@ -495,13 +546,21 @@ NewMigraines = np.copy(Migraines)
 
 stage = 1
 count = 0
-
+row = 0 
 
 while(stage <= MigrainesSymptoms.shape[0]):
     
     count = 0
     
     NewList = list(iter.combinations(MigrainesSymptoms, stage)) 
+    df = pd.DataFrame(NewList)
+    book = load_workbook("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx")
+    writer = pd.ExcelWriter("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx", engine="openpyxl")
+    writer.book = book
+    writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
+    df.to_excel(writer, sheet_name = 'Migraines', index=False, header=False, startrow=row)
+    row += len(NewList) + 1
+    writer.save()
     
     for item in range(len(NewList)):
         i = 0    
@@ -536,13 +595,21 @@ NewPollenAllergy = np.copy(PollenAllergy)
 
 stage = 1
 count = 0
-
+row = 0
 
 while(stage <= PollenAllergySymptoms.shape[0]):
     
     count = 0
     
     NewList = list(iter.combinations(PollenAllergySymptoms, stage)) 
+    df = pd.DataFrame(NewList)
+    book = load_workbook("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx")
+    writer = pd.ExcelWriter("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx", engine="openpyxl")
+    writer.book = book
+    writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
+    df.to_excel(writer, sheet_name = 'Pollen Allergy', index=False, header=False, startrow=row)
+    row += len(NewList) + 1
+    writer.save()
     
     for item in range(len(NewList)):
         i = 0    
@@ -577,13 +644,21 @@ NewTuberculosis = np.copy(Tuberculosis)
 
 stage = 1
 count = 0
-
+row = 0 
 
 while(stage <= TuberculosisSymptoms.shape[0]):
     
     count = 0
     
     NewList = list(iter.combinations(TuberculosisSymptoms, stage)) 
+    df = pd.DataFrame(NewList)
+    book = load_workbook("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx")
+    writer = pd.ExcelWriter("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx", engine="openpyxl")
+    writer.book = book
+    writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
+    df.to_excel(writer, sheet_name = 'Tuberculosis', index=False, header=False, startrow=row)
+    row += len(NewList) + 1
+    writer.save()
     
     for item in range(len(NewList)):
         i = 0    
@@ -608,4 +683,3 @@ while(stage <= TuberculosisSymptoms.shape[0]):
     
 #---------------------------------------------------------------------#
 
-'''
