@@ -231,7 +231,7 @@ while(stage <= AnemiaSymptoms.shape[0]):
     
 #----------------------------------------------------------#
 
-'''
+
 
 #--------------------- Bronchitis Block --------------------------#
 
@@ -254,7 +254,6 @@ while(stage <= BronchitisSymptoms.shape[0]):
     writer.book = book
     writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
     df.to_excel(writer, sheet_name = 'Bronchitis', index=False, header=False, startrow=row)
-    row += len(NewList) + 1
     writer.save()
     
     for item in range(len(NewList)):
@@ -265,8 +264,13 @@ while(stage <= BronchitisSymptoms.shape[0]):
             
         #------ Algorithm Goes Here ------#    
         
-#        print(NewBronchitis)
-#        print("")
+        result = algo.Method1(NewAnemia)
+        ResultsList = []
+        ResultsList.append(result)
+        df = pd.DataFrame(ResultsList)
+        df.to_excel(writer, sheet_name = 'Bronchitis', index=False, header=False, startrow=row, startcol=stage)
+        row += 1
+        writer.save()
         
         #---------------------------------#
         
@@ -304,7 +308,6 @@ while(stage <= ColdSoreSymptoms.shape[0]):
     writer.book = book
     writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
     df.to_excel(writer, sheet_name = 'Cold Sore', index=False, header=False, startrow=row)
-    row += len(NewList) + 1
     writer.save()
     
     
@@ -316,8 +319,13 @@ while(stage <= ColdSoreSymptoms.shape[0]):
             
         #------ Algorithm Goes Here ------#    
         
-#        print(NewColdSore)
-#        print("")
+        result = algo.Method1(NewAnemia)
+        ResultsList = []
+        ResultsList.append(result)
+        df = pd.DataFrame(ResultsList)
+        df.to_excel(writer, sheet_name = 'Cold Sore', index=False, header=False, startrow=row, startcol=stage)
+        row += 1
+        writer.save()
         
         #---------------------------------#
         
@@ -354,7 +362,6 @@ while(stage <= ConjunctivitisSymptoms.shape[0]):
     writer.book = book
     writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
     df.to_excel(writer, sheet_name = 'Conjunctivitis', index=False, header=False, startrow=row)
-    row += len(NewList) + 1
     writer.save()
     
     for item in range(len(NewList)):
@@ -365,8 +372,13 @@ while(stage <= ConjunctivitisSymptoms.shape[0]):
             
         #------ Algorithm Goes Here ------#    
         
-#        print(NewConjunctivitis)
-#        print("")
+        result = algo.Method1(NewAnemia)
+        ResultsList = []
+        ResultsList.append(result)
+        df = pd.DataFrame(ResultsList)
+        df.to_excel(writer, sheet_name = 'Conjunctivitis', index=False, header=False, startrow=row, startcol=stage)
+        row += 1
+        writer.save()
         
         #---------------------------------#
         
@@ -404,7 +416,6 @@ while(stage <= DiabetesSymptoms.shape[0]):
     writer.book = book
     writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
     df.to_excel(writer, sheet_name = 'Diabetes', index=False, header=False, startrow=row)
-    row += len(NewList) + 1
     writer.save()
     
     for item in range(len(NewList)):
@@ -415,8 +426,13 @@ while(stage <= DiabetesSymptoms.shape[0]):
             
         #------ Algorithm Goes Here ------#    
         
-#        print(NewDiabetes)
-#        print("")
+        result = algo.Method1(NewAnemia)
+        ResultsList = []
+        ResultsList.append(result)
+        df = pd.DataFrame(ResultsList)
+        df.to_excel(writer, sheet_name = 'Diabetes', index=False, header=False, startrow=row, startcol=stage)
+        row += 1
+        writer.save()
         
         #---------------------------------#
         
@@ -454,7 +470,6 @@ while(stage <= ChickenpoxSymptoms.shape[0]):
     writer.book = book
     writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
     df.to_excel(writer, sheet_name = 'Chickenpox', index=False, header=False, startrow=row)
-    row += len(NewList) + 1
     writer.save()
     
     for item in range(len(NewList)):
@@ -465,8 +480,13 @@ while(stage <= ChickenpoxSymptoms.shape[0]):
             
         #------ Algorithm Goes Here ------#    
         
-#        print(NewChickenpox)
-#        print("")
+        result = algo.Method1(NewAnemia)
+        ResultsList = []
+        ResultsList.append(result)
+        df = pd.DataFrame(ResultsList)
+        df.to_excel(writer, sheet_name = 'Chickenpox', index=False, header=False, startrow=row, startcol=stage)
+        row += 1
+        writer.save()
         
         #---------------------------------#
         
@@ -504,7 +524,6 @@ while(stage <= KidneyStonesSymptoms.shape[0]):
     writer.book = book
     writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
     df.to_excel(writer, sheet_name = 'Kidney Stones', index=False, header=False, startrow=row)
-    row += len(NewList) + 1
     writer.save()
     
     for item in range(len(NewList)):
@@ -515,8 +534,13 @@ while(stage <= KidneyStonesSymptoms.shape[0]):
             
         #------ Algorithm Goes Here ------#    
         
-#        print(NewKidneyStones)
-#        print("")
+        result = algo.Method1(NewAnemia)
+        ResultsList = []
+        ResultsList.append(result)
+        df = pd.DataFrame(ResultsList)
+        df.to_excel(writer, sheet_name = 'Kidney Stones', index=False, header=False, startrow=row, startcol=stage)
+        row += 1
+        writer.save()
         
         #---------------------------------#
         
@@ -554,7 +578,6 @@ while(stage <= MigrainesSymptoms.shape[0]):
     writer.book = book
     writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
     df.to_excel(writer, sheet_name = 'Migraines', index=False, header=False, startrow=row)
-    row += len(NewList) + 1
     writer.save()
     
     for item in range(len(NewList)):
@@ -565,8 +588,13 @@ while(stage <= MigrainesSymptoms.shape[0]):
             
         #------ Algorithm Goes Here ------#    
         
-#        print(NewMigraines)
-#        print("")
+        result = algo.Method1(NewAnemia)
+        ResultsList = []
+        ResultsList.append(result)
+        df = pd.DataFrame(ResultsList)
+        df.to_excel(writer, sheet_name = 'Migraines', index=False, header=False, startrow=row, startcol=stage)
+        row += 1
+        writer.save()
         
         #---------------------------------#
         
@@ -603,7 +631,6 @@ while(stage <= PollenAllergySymptoms.shape[0]):
     writer.book = book
     writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
     df.to_excel(writer, sheet_name = 'Pollen Allergy', index=False, header=False, startrow=row)
-    row += len(NewList) + 1
     writer.save()
     
     for item in range(len(NewList)):
@@ -614,8 +641,13 @@ while(stage <= PollenAllergySymptoms.shape[0]):
             
         #------ Algorithm Goes Here ------#    
         
-#        print(NewPollenAllergy)
-#        print("")
+        result = algo.Method1(NewAnemia)
+        ResultsList = []
+        ResultsList.append(result)
+        df = pd.DataFrame(ResultsList)
+        df.to_excel(writer, sheet_name = 'Pollen Allergy', index=False, header=False, startrow=row, startcol=stage)
+        row += 1
+        writer.save()
         
         #---------------------------------#
         
@@ -652,7 +684,6 @@ while(stage <= TuberculosisSymptoms.shape[0]):
     writer.book = book
     writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
     df.to_excel(writer, sheet_name = 'Tuberculosis', index=False, header=False, startrow=row)
-    row += len(NewList) + 1
     writer.save()
     
     for item in range(len(NewList)):
@@ -663,8 +694,13 @@ while(stage <= TuberculosisSymptoms.shape[0]):
             
         #------ Algorithm Goes Here ------#    
         
-#        print(NewTuberculosis)
-#        print("")
+        result = algo.Method1(NewAnemia)
+        ResultsList = []
+        ResultsList.append(result)
+        df = pd.DataFrame(ResultsList)
+        df.to_excel(writer, sheet_name = 'Tuberculosis', index=False, header=False, startrow=row, startcol=stage)
+        row += 1
+        writer.save()
         
         #---------------------------------#
         
@@ -680,5 +716,3 @@ while(stage <= TuberculosisSymptoms.shape[0]):
 
 
 
-
-'''
