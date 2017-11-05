@@ -12,6 +12,7 @@ import numpy as np
 import pandas as pd
 from openpyxl import load_workbook
 import itertools as iter
+import Algorithm_1_Method as algo
 
 
 df = pd.read_excel('/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Illness Matrix Barebones .xlsx')
@@ -199,9 +200,8 @@ while(stage <= AnemiaSymptoms.shape[0]):
     writer.book = book
     writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
     df.to_excel(writer, sheet_name = 'Anemia', index=False, header=False, startrow=row)
-    row += len(NewList) + 1
     writer.save()
-    
+     
     
     for item in range(len(NewList)):
         i = 0    
@@ -209,24 +209,19 @@ while(stage <= AnemiaSymptoms.shape[0]):
             NewAnemia[NewList[count][i]] = 0
             i = i + 1
             
-        #------ Algorithm Goes Here ------#    
-        
-#        df = pd.DataFrame(NewAnemia)
-#        df = pd.DataFrame.transpose(df)
+        #------ Algorithm Goes Here ------#  
 
-#        df = pd.DataFrame(NewList)
-#        
-#        book = load_workbook("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx")
-#        writer = pd.ExcelWriter("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx", engine="openpyxl")
-#        writer.book = book
-#        writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
-#        df.to_excel(writer, sheet_name = 'Anemia', index=False, header=False, startrow=row)
-#        row = row + 1
-#        writer.save()
-        
+        result = algo.Method1(NewAnemia)
+        ResultsList = []
+        ResultsList.append(result)
+        df = pd.DataFrame(ResultsList)
+        df.to_excel(writer, sheet_name = 'Anemia', index=False, header=False, startrow=row, startcol=stage)
+        row += 1
+        writer.save()
+
         #---------------------------------#
         
-        i = 0    
+        i = 0
         while(i < stage):
             NewAnemia[NewList[count][i]] = 1
             i = i + 1
@@ -236,7 +231,7 @@ while(stage <= AnemiaSymptoms.shape[0]):
     
 #----------------------------------------------------------#
 
-
+'''
 
 #--------------------- Bronchitis Block --------------------------#
 
@@ -683,3 +678,7 @@ while(stage <= TuberculosisSymptoms.shape[0]):
     
 #---------------------------------------------------------------------#
 
+
+
+
+'''
