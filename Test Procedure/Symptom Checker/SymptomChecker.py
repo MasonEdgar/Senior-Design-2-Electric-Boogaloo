@@ -264,7 +264,7 @@ while(stage <= BronchitisSymptoms.shape[0]):
             
         #------ Algorithm Goes Here ------#    
         
-        result = algo.Method1(NewAnemia)
+        result = algo.Method1(NewBronchitis)
         ResultsList = []
         ResultsList.append(result)
         df = pd.DataFrame(ResultsList)
@@ -319,7 +319,7 @@ while(stage <= ColdSoreSymptoms.shape[0]):
             
         #------ Algorithm Goes Here ------#    
         
-        result = algo.Method1(NewAnemia)
+        result = algo.Method1(NewColdSore)
         ResultsList = []
         ResultsList.append(result)
         df = pd.DataFrame(ResultsList)
@@ -372,7 +372,7 @@ while(stage <= ConjunctivitisSymptoms.shape[0]):
             
         #------ Algorithm Goes Here ------#    
         
-        result = algo.Method1(NewAnemia)
+        result = algo.Method1(NewConjunctivitis)
         ResultsList = []
         ResultsList.append(result)
         df = pd.DataFrame(ResultsList)
@@ -426,7 +426,7 @@ while(stage <= DiabetesSymptoms.shape[0]):
             
         #------ Algorithm Goes Here ------#    
         
-        result = algo.Method1(NewAnemia)
+        result = algo.Method1(NewDiabetes)
         ResultsList = []
         ResultsList.append(result)
         df = pd.DataFrame(ResultsList)
@@ -480,7 +480,7 @@ while(stage <= ChickenpoxSymptoms.shape[0]):
             
         #------ Algorithm Goes Here ------#    
         
-        result = algo.Method1(NewAnemia)
+        result = algo.Method1(NewChickenpox)
         ResultsList = []
         ResultsList.append(result)
         df = pd.DataFrame(ResultsList)
@@ -534,7 +534,7 @@ while(stage <= KidneyStonesSymptoms.shape[0]):
             
         #------ Algorithm Goes Here ------#    
         
-        result = algo.Method1(NewAnemia)
+        result = algo.Method1(NewKidneyStones)
         ResultsList = []
         ResultsList.append(result)
         df = pd.DataFrame(ResultsList)
@@ -588,7 +588,7 @@ while(stage <= MigrainesSymptoms.shape[0]):
             
         #------ Algorithm Goes Here ------#    
         
-        result = algo.Method1(NewAnemia)
+        result = algo.Method1(NewMigraines)
         ResultsList = []
         ResultsList.append(result)
         df = pd.DataFrame(ResultsList)
@@ -641,7 +641,7 @@ while(stage <= PollenAllergySymptoms.shape[0]):
             
         #------ Algorithm Goes Here ------#    
         
-        result = algo.Method1(NewAnemia)
+        result = algo.Method1(NewPollenAllergy)
         ResultsList = []
         ResultsList.append(result)
         df = pd.DataFrame(ResultsList)
@@ -694,7 +694,7 @@ while(stage <= TuberculosisSymptoms.shape[0]):
             
         #------ Algorithm Goes Here ------#    
         
-        result = algo.Method1(NewAnemia)
+        result = algo.Method1(NewTuberculosis)
         ResultsList = []
         ResultsList.append(result)
         df = pd.DataFrame(ResultsList)
@@ -713,6 +713,3 @@ while(stage <= TuberculosisSymptoms.shape[0]):
     stage = stage + 1
     
 #---------------------------------------------------------------------#
-
-
-
