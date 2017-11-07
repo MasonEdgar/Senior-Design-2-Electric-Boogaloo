@@ -10,7 +10,6 @@ Senior Capstone - 2017
 
 import numpy as np
 import pandas as pd
-from openpyxl import load_workbook
 import itertools as iter
 import Algorithm_1_Method as algo
 import xlsxwriter as xlsx
@@ -239,7 +238,7 @@ print("Anemia done!")
 
 
 
-'''
+
 #--------------------- Bronchitis Block --------------------------#
 
 
@@ -249,21 +248,25 @@ stage = 1
 count = 0
 row = 0
 
+wb = xlsx.Workbook('NewTestWorkbook.xlsx')
+ws1 = wb.add_worksheet('Bronchitis')
+
 
 while(stage <= BronchitisSymptoms.shape[0]):
     
     count = 0
     
-    NewList = list(iter.combinations(BronchitisSymptoms, stage))
+    NewList = list(iter.combinations(BronchitisSymptoms, stage)) 
     df = pd.DataFrame(NewList)
-    book = load_workbook("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx")
-    writer = pd.ExcelWriter("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx", optimize_write=True, engine="openpyxl")
-    writer.book = book
-    writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
-    df.to_excel(writer, sheet_name = 'Bronchitis', index=False, header=False, startrow=row)
-    writer.save()
+    df_matrix = df.as_matrix()
     
+    row_old = df_matrix.shape[0]
     
+    for x in range(df_matrix.shape[0]):
+        ws1.write_row(row, 0, list(df_matrix[x]))
+        row += 1
+           
+    row = row - row_old 
     
     for item in range(len(NewList)):
         i = 0    
@@ -271,29 +274,31 @@ while(stage <= BronchitisSymptoms.shape[0]):
             NewBronchitis[NewList[count][i]] = 0
             i = i + 1
             
-        #------ Algorithm Goes Here ------#    
-        
+        #------ Algorithm Goes Here ------#  
+
         result = algo.Method1(NewBronchitis)
-        ResultsList = []
-        ResultsList.append(result)
-        df = pd.DataFrame(ResultsList)
-        df.to_csv(writer, sheet_name = 'Bronchitis', index=False, header=False, startrow=row, startcol=stage)
-        row += 1
-        writer.save()
         
+        ws1.write(row, stage, result)
+            
+        row += 1
+
         #---------------------------------#
         
-        i = 0    
+        i = 0
         while(i < stage):
             NewBronchitis[NewList[count][i]] = 1
             i = i + 1
-        count = count + 1       
+        count = count + 1
+        
         
     stage = stage + 1
     
+wb.close()
+print("Bronchitis done!")   
+    
 #---------------------------------------------------------------#
 
-print("Bronchitis done!")
+
 
 
 #--------------------- Cold Sore Block --------------------------#
@@ -305,20 +310,25 @@ stage = 1
 count = 0
 row = 0
 
+wb = xlsx.Workbook('NewTestWorkbook.xlsx')
+ws1 = wb.add_worksheet('Cold Sore')
+
 
 while(stage <= ColdSoreSymptoms.shape[0]):
     
     count = 0
     
-    NewList = list(iter.combinations(ColdSoreSymptoms, stage))
+    NewList = list(iter.combinations(ColdSoreSymptoms, stage)) 
     df = pd.DataFrame(NewList)
-    book = load_workbook("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx")
-    writer = pd.ExcelWriter("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx", engine="openpyxl")
-    writer.book = book
-    writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
-    df.to_excel(writer, sheet_name = 'Cold Sore', index=False, header=False, startrow=row)
-    writer.save()
+    df_matrix = df.as_matrix()
     
+    row_old = df_matrix.shape[0]
+    
+    for x in range(df_matrix.shape[0]):
+        ws1.write_row(row, 0, list(df_matrix[x]))
+        row += 1
+           
+    row = row - row_old 
     
     for item in range(len(NewList)):
         i = 0    
@@ -326,29 +336,30 @@ while(stage <= ColdSoreSymptoms.shape[0]):
             NewColdSore[NewList[count][i]] = 0
             i = i + 1
             
-        #------ Algorithm Goes Here ------#    
-        
+        #------ Algorithm Goes Here ------#  
+
         result = algo.Method1(NewColdSore)
-        ResultsList = []
-        ResultsList.append(result)
-        df = pd.DataFrame(ResultsList)
-        df.to_excel(writer, sheet_name = 'Cold Sore', index=False, header=False, startrow=row, startcol=stage)
-        row += 1
-        writer.save()
         
+        ws1.write(row, stage, result)
+            
+        row += 1
+
         #---------------------------------#
         
-        i = 0    
+        i = 0
         while(i < stage):
             NewColdSore[NewList[count][i]] = 1
             i = i + 1
-        count = count + 1       
+        count = count + 1
+        
         
     stage = stage + 1
     
+wb.close()  
+print("Cold Sore done!")  
 #---------------------------------------------------------------#
 
-print("Cold Sore done!")
+
 
 
 #--------------------- Conjunctivitis Block --------------------------#
@@ -360,18 +371,24 @@ stage = 1
 count = 0
 row = 0 
 
+wb = xlsx.Workbook('NewTestWorkbook.xlsx')
+ws1 = wb.add_worksheet('Conjunctivitis')
+
 while(stage <= ConjunctivitisSymptoms.shape[0]):
     
     count = 0
     
-    NewList = list(iter.combinations(ConjunctivitisSymptoms, stage))
+    NewList = list(iter.combinations(ConjunctivitisSymptoms, stage)) 
     df = pd.DataFrame(NewList)
-    book = load_workbook("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx")
-    writer = pd.ExcelWriter("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx", engine="openpyxl")
-    writer.book = book
-    writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
-    df.to_excel(writer, sheet_name = 'Conjunctivitis', index=False, header=False, startrow=row)
-    writer.save()
+    df_matrix = df.as_matrix()
+    
+    row_old = df_matrix.shape[0]
+    
+    for x in range(df_matrix.shape[0]):
+        ws1.write_row(row, 0, list(df_matrix[x]))
+        row += 1
+           
+    row = row - row_old 
     
     for item in range(len(NewList)):
         i = 0    
@@ -379,29 +396,28 @@ while(stage <= ConjunctivitisSymptoms.shape[0]):
             NewConjunctivitis[NewList[count][i]] = 0
             i = i + 1
             
-        #------ Algorithm Goes Here ------#    
-        
+        #------ Algorithm Goes Here ------#  
+
         result = algo.Method1(NewConjunctivitis)
-        ResultsList = []
-        ResultsList.append(result)
-        df = pd.DataFrame(ResultsList)
-        df.to_excel(writer, sheet_name = 'Conjunctivitis', index=False, header=False, startrow=row, startcol=stage)
-        row += 1
-        writer.save()
         
+        ws1.write(row, stage, result)
+            
+        row += 1
+
         #---------------------------------#
         
-        i = 0    
+        i = 0
         while(i < stage):
             NewConjunctivitis[NewList[count][i]] = 1
             i = i + 1
-        count = count + 1       
+        count = count + 1
+        
         
     stage = stage + 1
     
-#---------------------------------------------------------------------#
-
+wb.close()
 print("Conjunctivitis done!")
+#---------------------------------------------------------------------#
 
 
 
@@ -414,18 +430,24 @@ stage = 1
 count = 0
 row = 0 
 
+wb = xlsx.Workbook('NewTestWorkbook.xlsx')
+ws1 = wb.add_worksheet('Diabetes')
+
 while(stage <= DiabetesSymptoms.shape[0]):
     
     count = 0
     
     NewList = list(iter.combinations(DiabetesSymptoms, stage)) 
     df = pd.DataFrame(NewList)
-    book = load_workbook("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx")
-    writer = pd.ExcelWriter("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx", engine="openpyxl")
-    writer.book = book
-    writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
-    df.to_excel(writer, sheet_name = 'Diabetes', index=False, header=False, startrow=row)
-    writer.save()
+    df_matrix = df.as_matrix()
+    
+    row_old = df_matrix.shape[0]
+    
+    for x in range(df_matrix.shape[0]):
+        ws1.write_row(row, 0, list(df_matrix[x]))
+        row += 1
+           
+    row = row - row_old 
     
     for item in range(len(NewList)):
         i = 0    
@@ -433,30 +455,31 @@ while(stage <= DiabetesSymptoms.shape[0]):
             NewDiabetes[NewList[count][i]] = 0
             i = i + 1
             
-        #------ Algorithm Goes Here ------#    
-        
+        #------ Algorithm Goes Here ------#  
+
         result = algo.Method1(NewDiabetes)
-        ResultsList = []
-        ResultsList.append(result)
-        df = pd.DataFrame(ResultsList)
-        df.to_excel(writer, sheet_name = 'Diabetes', index=False, header=False, startrow=row, startcol=stage)
-        row += 1
-        writer.save()
         
+        ws1.write(row, stage, result)
+            
+        row += 1
+
         #---------------------------------#
         
-        i = 0    
+        i = 0
         while(i < stage):
             NewDiabetes[NewList[count][i]] = 1
             i = i + 1
-        count = count + 1       
+        count = count + 1
+        
         
     stage = stage + 1
     
+wb.close()  
+print("Diabetes done!")  
 #---------------------------------------------------------------------#
 
 
-print("Diabetes done!")
+
 
 
 #------------------------- Chickenpox Block ----------------------------#
@@ -468,18 +491,24 @@ stage = 1
 count = 0
 row = 0 
 
+wb = xlsx.Workbook('NewTestWorkbook.xlsx')
+ws1 = wb.add_worksheet('Chickenpox')
+
 while(stage <= ChickenpoxSymptoms.shape[0]):
     
     count = 0
     
     NewList = list(iter.combinations(ChickenpoxSymptoms, stage)) 
     df = pd.DataFrame(NewList)
-    book = load_workbook("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx")
-    writer = pd.ExcelWriter("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx", engine="openpyxl")
-    writer.book = book
-    writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
-    df.to_excel(writer, sheet_name = 'Chickenpox', index=False, header=False, startrow=row)
-    writer.save()
+    df_matrix = df.as_matrix()
+    
+    row_old = df_matrix.shape[0]
+    
+    for x in range(df_matrix.shape[0]):
+        ws1.write_row(row, 0, list(df_matrix[x]))
+        row += 1
+           
+    row = row - row_old 
     
     for item in range(len(NewList)):
         i = 0    
@@ -487,29 +516,30 @@ while(stage <= ChickenpoxSymptoms.shape[0]):
             NewChickenpox[NewList[count][i]] = 0
             i = i + 1
             
-        #------ Algorithm Goes Here ------#    
-        
+        #------ Algorithm Goes Here ------#  
+
         result = algo.Method1(NewChickenpox)
-        ResultsList = []
-        ResultsList.append(result)
-        df = pd.DataFrame(ResultsList)
-        df.to_excel(writer, sheet_name = 'Chickenpox', index=False, header=False, startrow=row, startcol=stage)
-        row += 1
-        writer.save()
         
+        ws1.write(row, stage, result)
+            
+        row += 1
+
         #---------------------------------#
         
-        i = 0    
+        i = 0
         while(i < stage):
             NewChickenpox[NewList[count][i]] = 1
             i = i + 1
-        count = count + 1       
+        count = count + 1
+        
         
     stage = stage + 1
     
+wb.close()     
+print("Chickenpox done!")
 #----------------------------------------------------------------------#
 
-print("Chickenpox done!")
+
 
 
 
@@ -522,18 +552,24 @@ stage = 1
 count = 0
 row = 0 
 
+wb = xlsx.Workbook('NewTestWorkbook.xlsx')
+ws1 = wb.add_worksheet('Kidney Stones')
+
 while(stage <= KidneyStonesSymptoms.shape[0]):
     
     count = 0
     
     NewList = list(iter.combinations(KidneyStonesSymptoms, stage)) 
     df = pd.DataFrame(NewList)
-    book = load_workbook("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx")
-    writer = pd.ExcelWriter("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx", engine="openpyxl")
-    writer.book = book
-    writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
-    df.to_excel(writer, sheet_name = 'Kidney Stones', index=False, header=False, startrow=row)
-    writer.save()
+    df_matrix = df.as_matrix()
+    
+    row_old = df_matrix.shape[0]
+    
+    for x in range(df_matrix.shape[0]):
+        ws1.write_row(row, 0, list(df_matrix[x]))
+        row += 1
+           
+    row = row - row_old 
     
     for item in range(len(NewList)):
         i = 0    
@@ -541,30 +577,29 @@ while(stage <= KidneyStonesSymptoms.shape[0]):
             NewKidneyStones[NewList[count][i]] = 0
             i = i + 1
             
-        #------ Algorithm Goes Here ------#    
-        
+        #------ Algorithm Goes Here ------#  
+
         result = algo.Method1(NewKidneyStones)
-        ResultsList = []
-        ResultsList.append(result)
-        df = pd.DataFrame(ResultsList)
-        df.to_excel(writer, sheet_name = 'Kidney Stones', index=False, header=False, startrow=row, startcol=stage)
-        row += 1
-        writer.save()
         
+        ws1.write(row, stage, result)
+            
+        row += 1
+
         #---------------------------------#
         
-        i = 0    
+        i = 0
         while(i < stage):
             NewKidneyStones[NewList[count][i]] = 1
             i = i + 1
-        count = count + 1       
+        count = count + 1
+        
         
     stage = stage + 1
     
+wb.close() 
+print("Kidney Stones done!")  
 #------------------------------------------------------------------------#
 
-
-print("Kidney Stones done!")
 
 
 #------------------------- Migraines Block ----------------------------#
@@ -576,18 +611,24 @@ stage = 1
 count = 0
 row = 0 
 
+wb = xlsx.Workbook('NewTestWorkbook.xlsx')
+ws1 = wb.add_worksheet('Migraines')
+
 while(stage <= MigrainesSymptoms.shape[0]):
     
     count = 0
     
     NewList = list(iter.combinations(MigrainesSymptoms, stage)) 
     df = pd.DataFrame(NewList)
-    book = load_workbook("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx")
-    writer = pd.ExcelWriter("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx", engine="openpyxl")
-    writer.book = book
-    writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
-    df.to_excel(writer, sheet_name = 'Migraines', index=False, header=False, startrow=row)
-    writer.save()
+    df_matrix = df.as_matrix()
+    
+    row_old = df_matrix.shape[0]
+    
+    for x in range(df_matrix.shape[0]):
+        ws1.write_row(row, 0, list(df_matrix[x]))
+        row += 1
+           
+    row = row - row_old 
     
     for item in range(len(NewList)):
         i = 0    
@@ -595,30 +636,31 @@ while(stage <= MigrainesSymptoms.shape[0]):
             NewMigraines[NewList[count][i]] = 0
             i = i + 1
             
-        #------ Algorithm Goes Here ------#    
-        
+        #------ Algorithm Goes Here ------#  
+
         result = algo.Method1(NewMigraines)
-        ResultsList = []
-        ResultsList.append(result)
-        df = pd.DataFrame(ResultsList)
-        df.to_excel(writer, sheet_name = 'Migraines', index=False, header=False, startrow=row, startcol=stage)
-        row += 1
-        writer.save()
         
+        ws1.write(row, stage, result)
+            
+        row += 1
+
         #---------------------------------#
         
-        i = 0    
+        i = 0
         while(i < stage):
             NewMigraines[NewList[count][i]] = 1
             i = i + 1
-        count = count + 1       
+        count = count + 1
+        
         
     stage = stage + 1
     
+wb.close()
+print("Migraines done!")   
 #---------------------------------------------------------------------#
 
 
-print("Migraines done!")
+
 
 #------------------------ Pollen Allergy Block -----------------------#
 
@@ -629,18 +671,24 @@ stage = 1
 count = 0
 row = 0
 
+wb = xlsx.Workbook('NewTestWorkbook.xlsx')
+ws1 = wb.add_worksheet('Pollen Allergy')
+
 while(stage <= PollenAllergySymptoms.shape[0]):
     
     count = 0
     
     NewList = list(iter.combinations(PollenAllergySymptoms, stage)) 
     df = pd.DataFrame(NewList)
-    book = load_workbook("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx")
-    writer = pd.ExcelWriter("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx", engine="openpyxl")
-    writer.book = book
-    writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
-    df.to_excel(writer, sheet_name = 'Pollen Allergy', index=False, header=False, startrow=row)
-    writer.save()
+    df_matrix = df.as_matrix()
+    
+    row_old = df_matrix.shape[0]
+    
+    for x in range(df_matrix.shape[0]):
+        ws1.write_row(row, 0, list(df_matrix[x]))
+        row += 1
+           
+    row = row - row_old 
     
     for item in range(len(NewList)):
         i = 0    
@@ -648,29 +696,30 @@ while(stage <= PollenAllergySymptoms.shape[0]):
             NewPollenAllergy[NewList[count][i]] = 0
             i = i + 1
             
-        #------ Algorithm Goes Here ------#    
-        
+        #------ Algorithm Goes Here ------#  
+
         result = algo.Method1(NewPollenAllergy)
-        ResultsList = []
-        ResultsList.append(result)
-        df = pd.DataFrame(ResultsList)
-        df.to_excel(writer, sheet_name = 'Pollen Allergy', index=False, header=False, startrow=row, startcol=stage)
-        row += 1
-        writer.save()
         
+        ws1.write(row, stage, result)
+            
+        row += 1
+
         #---------------------------------#
         
-        i = 0    
+        i = 0
         while(i < stage):
             NewPollenAllergy[NewList[count][i]] = 1
             i = i + 1
-        count = count + 1       
+        count = count + 1
+        
         
     stage = stage + 1
     
+wb.close()
+print("Pollen Allergy done!")    
 #---------------------------------------------------------------------#
 
-print("Pollen Allergy done!")
+
 
 
 #------------------------ Tuberculosis Block -------------------------#
@@ -682,18 +731,24 @@ stage = 1
 count = 0
 row = 0 
 
+wb = xlsx.Workbook('NewTestWorkbook.xlsx')
+ws1 = wb.add_worksheet('Tuberculosis')
+
 while(stage <= TuberculosisSymptoms.shape[0]):
     
     count = 0
     
     NewList = list(iter.combinations(TuberculosisSymptoms, stage)) 
     df = pd.DataFrame(NewList)
-    book = load_workbook("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx")
-    writer = pd.ExcelWriter("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx", engine="openpyxl")
-    writer.book = book
-    writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
-    df.to_excel(writer, sheet_name = 'Tuberculosis', index=False, header=False, startrow=row)
-    writer.save()
+    df_matrix = df.as_matrix()
+    
+    row_old = df_matrix.shape[0]
+    
+    for x in range(df_matrix.shape[0]):
+        ws1.write_row(row, 0, list(df_matrix[x]))
+        row += 1
+           
+    row = row - row_old 
     
     for item in range(len(NewList)):
         i = 0    
@@ -701,28 +756,25 @@ while(stage <= TuberculosisSymptoms.shape[0]):
             NewTuberculosis[NewList[count][i]] = 0
             i = i + 1
             
-        #------ Algorithm Goes Here ------#    
-        
+        #------ Algorithm Goes Here ------#  
+
         result = algo.Method1(NewTuberculosis)
-        ResultsList = []
-        ResultsList.append(result)
-        df = pd.DataFrame(ResultsList)
-        df.to_excel(writer, sheet_name = 'Tuberculosis', index=False, header=False, startrow=row, startcol=stage)
-        row += 1
-        writer.save()
         
+        ws1.write(row, stage, result)
+            
+        row += 1
+
         #---------------------------------#
         
-        i = 0    
+        i = 0
         while(i < stage):
             NewTuberculosis[NewList[count][i]] = 1
             i = i + 1
-        count = count + 1       
+        count = count + 1
+        
         
     stage = stage + 1
     
+wb.close()
+print("Tuberculosis done!")    
 #---------------------------------------------------------------------#
-
-print("Tuberculosis done!")
-
-'''
