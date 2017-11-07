@@ -13,6 +13,7 @@ import pandas as pd
 from openpyxl import load_workbook
 import itertools as iter
 import Algorithm_1_Method as algo
+import xlsxwriter as xlsx
 
 
 df = pd.read_excel('/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Illness Matrix Barebones .xlsx')
@@ -178,7 +179,6 @@ for x in Tuberculosis:
 
 
 
-
 #--------------------- Anemia Block ------------------------#
 
 
@@ -188,6 +188,9 @@ stage = 1
 count = 0
 row = 0
 
+wb = xlsx.Workbook('NewTestWorkbook.xlsx')
+ws1 = wb.add_worksheet('Anemia')
+
 
 while(stage <= AnemiaSymptoms.shape[0]):
     
@@ -195,13 +198,15 @@ while(stage <= AnemiaSymptoms.shape[0]):
     
     NewList = list(iter.combinations(AnemiaSymptoms, stage)) 
     df = pd.DataFrame(NewList)
-    book = load_workbook("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx")
-    writer = pd.ExcelWriter("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx", engine="openpyxl")
-    writer.book = book
-    writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
-    df.to_excel(writer, sheet_name = 'Anemia', index=False, header=False, startrow=row)
-    writer.save()
-     
+    df_matrix = df.as_matrix()
+    
+    row_old = df_matrix.shape[0]
+    
+    for x in range(df_matrix.shape[0]):
+        ws1.write_row(row, 0, list(df_matrix[x]))
+        row += 1
+           
+    row = row - row_old 
     
     for item in range(len(NewList)):
         i = 0    
@@ -212,12 +217,10 @@ while(stage <= AnemiaSymptoms.shape[0]):
         #------ Algorithm Goes Here ------#  
 
         result = algo.Method1(NewAnemia)
-        ResultsList = []
-        ResultsList.append(result)
-        df = pd.DataFrame(ResultsList)
-        df.to_excel(writer, sheet_name = 'Anemia', index=False, header=False, startrow=row, startcol=stage)
+        
+        ws1.write(row, stage, result)
+            
         row += 1
-        writer.save()
 
         #---------------------------------#
         
@@ -225,14 +228,18 @@ while(stage <= AnemiaSymptoms.shape[0]):
         while(i < stage):
             NewAnemia[NewList[count][i]] = 1
             i = i + 1
-        count = count + 1       
+        count = count + 1
+        
         
     stage = stage + 1
     
+wb.close()
+print("Anemia done!")   
 #----------------------------------------------------------#
 
 
 
+'''
 #--------------------- Bronchitis Block --------------------------#
 
 
@@ -250,11 +257,13 @@ while(stage <= BronchitisSymptoms.shape[0]):
     NewList = list(iter.combinations(BronchitisSymptoms, stage))
     df = pd.DataFrame(NewList)
     book = load_workbook("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx")
-    writer = pd.ExcelWriter("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx", engine="openpyxl")
+    writer = pd.ExcelWriter("/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Test Procedure Data.xlsx", optimize_write=True, engine="openpyxl")
     writer.book = book
     writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
     df.to_excel(writer, sheet_name = 'Bronchitis', index=False, header=False, startrow=row)
     writer.save()
+    
+    
     
     for item in range(len(NewList)):
         i = 0    
@@ -268,7 +277,7 @@ while(stage <= BronchitisSymptoms.shape[0]):
         ResultsList = []
         ResultsList.append(result)
         df = pd.DataFrame(ResultsList)
-        df.to_excel(writer, sheet_name = 'Bronchitis', index=False, header=False, startrow=row, startcol=stage)
+        df.to_csv(writer, sheet_name = 'Bronchitis', index=False, header=False, startrow=row, startcol=stage)
         row += 1
         writer.save()
         
@@ -284,7 +293,7 @@ while(stage <= BronchitisSymptoms.shape[0]):
     
 #---------------------------------------------------------------#
 
-
+print("Bronchitis done!")
 
 
 #--------------------- Cold Sore Block --------------------------#
@@ -339,7 +348,7 @@ while(stage <= ColdSoreSymptoms.shape[0]):
     
 #---------------------------------------------------------------#
 
-
+print("Cold Sore done!")
 
 
 #--------------------- Conjunctivitis Block --------------------------#
@@ -392,7 +401,7 @@ while(stage <= ConjunctivitisSymptoms.shape[0]):
     
 #---------------------------------------------------------------------#
 
-
+print("Conjunctivitis done!")
 
 
 
@@ -447,7 +456,7 @@ while(stage <= DiabetesSymptoms.shape[0]):
 #---------------------------------------------------------------------#
 
 
-
+print("Diabetes done!")
 
 
 #------------------------- Chickenpox Block ----------------------------#
@@ -500,7 +509,7 @@ while(stage <= ChickenpoxSymptoms.shape[0]):
     
 #----------------------------------------------------------------------#
 
-
+print("Chickenpox done!")
 
 
 
@@ -555,7 +564,7 @@ while(stage <= KidneyStonesSymptoms.shape[0]):
 #------------------------------------------------------------------------#
 
 
-
+print("Kidney Stones done!")
 
 
 #------------------------- Migraines Block ----------------------------#
@@ -609,7 +618,7 @@ while(stage <= MigrainesSymptoms.shape[0]):
 #---------------------------------------------------------------------#
 
 
-
+print("Migraines done!")
 
 #------------------------ Pollen Allergy Block -----------------------#
 
@@ -661,7 +670,7 @@ while(stage <= PollenAllergySymptoms.shape[0]):
     
 #---------------------------------------------------------------------#
 
-
+print("Pollen Allergy done!")
 
 
 #------------------------ Tuberculosis Block -------------------------#
@@ -713,3 +722,7 @@ while(stage <= TuberculosisSymptoms.shape[0]):
     stage = stage + 1
     
 #---------------------------------------------------------------------#
+
+print("Tuberculosis done!")
+
+'''
