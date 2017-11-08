@@ -187,7 +187,7 @@ stage = 1
 count = 0
 row = 0
 
-wb = xlsx.Workbook('NewTestWorkbook.xlsx')
+wb = xlsx.Workbook('Anemia.xlsx')
 ws1 = wb.add_worksheet('Anemia')
 
 
@@ -248,7 +248,7 @@ stage = 1
 count = 0
 row = 0
 
-wb = xlsx.Workbook('NewTestWorkbook.xlsx')
+wb = xlsx.Workbook('Bronchitis.xlsx')
 ws1 = wb.add_worksheet('Bronchitis')
 
 
@@ -310,7 +310,7 @@ stage = 1
 count = 0
 row = 0
 
-wb = xlsx.Workbook('NewTestWorkbook.xlsx')
+wb = xlsx.Workbook('ColdSore.xlsx')
 ws1 = wb.add_worksheet('Cold Sore')
 
 
@@ -371,7 +371,7 @@ stage = 1
 count = 0
 row = 0 
 
-wb = xlsx.Workbook('NewTestWorkbook.xlsx')
+wb = xlsx.Workbook('Conjunctivitis.xlsx')
 ws1 = wb.add_worksheet('Conjunctivitis')
 
 while(stage <= ConjunctivitisSymptoms.shape[0]):
@@ -430,7 +430,7 @@ stage = 1
 count = 0
 row = 0 
 
-wb = xlsx.Workbook('NewTestWorkbook.xlsx')
+wb = xlsx.Workbook('Diabetes.xlsx')
 ws1 = wb.add_worksheet('Diabetes')
 
 while(stage <= DiabetesSymptoms.shape[0]):
@@ -491,7 +491,7 @@ stage = 1
 count = 0
 row = 0 
 
-wb = xlsx.Workbook('NewTestWorkbook.xlsx')
+wb = xlsx.Workbook('Chickenpox.xlsx')
 ws1 = wb.add_worksheet('Chickenpox')
 
 while(stage <= ChickenpoxSymptoms.shape[0]):
@@ -552,7 +552,7 @@ stage = 1
 count = 0
 row = 0 
 
-wb = xlsx.Workbook('NewTestWorkbook.xlsx')
+wb = xlsx.Workbook('KidneyStones.xlsx')
 ws1 = wb.add_worksheet('Kidney Stones')
 
 while(stage <= KidneyStonesSymptoms.shape[0]):
@@ -611,7 +611,7 @@ stage = 1
 count = 0
 row = 0 
 
-wb = xlsx.Workbook('NewTestWorkbook.xlsx')
+wb = xlsx.Workbook('Migraines.xlsx')
 ws1 = wb.add_worksheet('Migraines')
 
 while(stage <= MigrainesSymptoms.shape[0]):
@@ -671,7 +671,7 @@ stage = 1
 count = 0
 row = 0
 
-wb = xlsx.Workbook('NewTestWorkbook.xlsx')
+wb = xlsx.Workbook('PollenAllergy.xlsx')
 ws1 = wb.add_worksheet('Pollen Allergy')
 
 while(stage <= PollenAllergySymptoms.shape[0]):
@@ -731,7 +731,7 @@ stage = 1
 count = 0
 row = 0 
 
-wb = xlsx.Workbook('NewTestWorkbook.xlsx')
+wb = xlsx.Workbook('Tuberculosis.xlsx')
 ws1 = wb.add_worksheet('Tuberculosis')
 
 while(stage <= TuberculosisSymptoms.shape[0]):
