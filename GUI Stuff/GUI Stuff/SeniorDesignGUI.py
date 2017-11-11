@@ -15,9 +15,16 @@ Ermias (Jeremy) Kebede
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QFileDialog, QLineEdit
 import numpy as np
+import pandas as pd
+import Algorithm_1_Method as algo
 
 
 ResponseVector = np.empty(shape=69, dtype=int, order='C')
+
+np.set_printoptions(threshold=np.nan)
+
+df = pd.read_excel('WeightedResponseVector.xlsx')
+WeightVector = df.as_matrix()
 
 
 class Ui_MainWindow(object):
@@ -886,10 +893,20 @@ class Ui_MainWindow(object):
            ResponseVector[index] = 0
            index = index + 1
        #------------------------------------------#
-
        
+       global WeightVector
+       Diagnosis = []
+       
+       for x in range(len(WeightVector[0])):
+           ResponseVector[x] = ResponseVector[x] * WeightVector[0][x]
+        
+       Diagnosis = algo.Method1(ResponseVector)
+       
+       QLineEdit.setText(self.lineEdit, Diagnosis[0])
+       QLineEdit.setText(self.lineEdit_2, Diagnosis[1])
+       QLineEdit.setText(self.lineEdit_3, Diagnosis[2])
 
-           
+        
 
 if __name__ == "__main__":
     import sys

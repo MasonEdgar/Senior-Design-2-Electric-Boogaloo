@@ -5,6 +5,7 @@ Symptom Checking Algorithm for the PMDK
 University of Houston | ECE
 Senior Capstone - 2017
 
+
 '''
 
 
@@ -15,7 +16,7 @@ import Algorithm_1_Method as algo
 import xlsxwriter as xlsx
 
 
-df = pd.read_excel('/Users/Mason/Documents/Senior-Design-2-Electric-Boogaloo/Test Procedure/Symptom Checker/Illness Matrix Barebones .xlsx')
+df = pd.read_excel('IllnessMatrixBarebones.xlsx')
 illness_matrix = df.as_matrix()
 
 np.set_printoptions(threshold=np.nan)
