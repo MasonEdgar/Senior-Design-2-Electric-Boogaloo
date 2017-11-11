@@ -5,10 +5,10 @@ def Method1(symptomVector):
     
     symptoms = []  # list that contains the symptoms
     illnessMatrix = []  # matrix for symptoms and illnesses
-    dataMatrix = []  # logical matrix for symptoms and illnesses
+#    dataMatrix = []  # logical matrix for symptoms and illnesses
     responseVector = symptomVector  # response vector from the GUI...as well as testing
     illnessDict = {}  # dictionary for totalling of matches for each illness
-    differentialDiag = []  # end differential diagnosis
+#    differentialDiag = []  # end differential diagnosis
 
     # read in symptoms into vector
     with open('SymptomList.csv', 'r') as file:
@@ -28,7 +28,7 @@ def Method1(symptomVector):
     illnessList = [item[0] for item in illnessMatrix]  # list for illnesses
     symptomMatrix = [item[1:] for item in illnessMatrix]
 
-    symptomMatrix = np.asarray(symptomMatrix).astype('int')
+    symptomMatrix = np.asarray(symptomMatrix).astype('float')
 
     # transpose responseVector for matrix multiplication...
     responseVector = np.transpose(responseVector)

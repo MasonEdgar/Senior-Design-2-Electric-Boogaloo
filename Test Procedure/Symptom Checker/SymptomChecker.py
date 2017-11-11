@@ -51,7 +51,7 @@ index = 0
 
 for x in Anemia:
     
-    if x == 1:
+    if x != 0:
         AnemiaSymptoms[index] = count
         index = index + 1
         count = count + 1
@@ -64,7 +64,7 @@ index = 0
 
 for x in Bronchitis:
     
-    if x == 1:
+    if x != 0:
         BronchitisSymptoms[index] = count
         index = index + 1
         count = count + 1
@@ -77,7 +77,7 @@ index = 0
 
 for x in ColdSore:
     
-    if x == 1:
+    if x != 0:
         ColdSoreSymptoms[index] = count
         index = index + 1
         count = count + 1
@@ -90,7 +90,7 @@ index = 0
 
 for x in Conjunctivitis:
     
-    if x == 1:
+    if x != 0:
         ConjunctivitisSymptoms[index] = count
         index = index + 1
         count = count + 1
@@ -103,7 +103,7 @@ index = 0
 
 for x in Diabetes:
     
-    if x == 1:
+    if x != 0:
         DiabetesSymptoms[index] = count
         index = index + 1
         count = count + 1
@@ -116,7 +116,7 @@ index = 0
 
 for x in Chickenpox:
     
-    if x == 1:
+    if x != 0:
         ChickenpoxSymptoms[index] = count
         index = index + 1
         count = count + 1
@@ -129,7 +129,7 @@ index = 0
 
 for x in KidneyStones:
     
-    if x == 1:
+    if x != 0:
         KidneyStonesSymptoms[index] = count
         index = index + 1
         count = count + 1
@@ -142,7 +142,7 @@ index = 0
 
 for x in Migraines:
     
-    if x == 1:
+    if x != 0:
         MigrainesSymptoms[index] = count
         index = index + 1
         count = count + 1
@@ -155,7 +155,7 @@ index = 0
 
 for x in PollenAllergy:
     
-    if x == 1:
+    if x != 0:
         PollenAllergySymptoms[index] = count
         index = index + 1
         count = count + 1
@@ -168,7 +168,7 @@ index = 0
 
 for x in Tuberculosis:
     
-    if x == 1:
+    if x != 0:
         TuberculosisSymptoms[index] = count
         index = index + 1
         count = count + 1
