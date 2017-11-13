@@ -298,6 +298,12 @@ class Ui_MainWindow(object):
         self.ConfirmButton.setStyleSheet("background-color:rgb(85, 255, 255)")
         self.ConfirmButton.setFlat(False)
         self.ConfirmButton.setObjectName("ConfirmButton")
+        
+        self.ClearButton = QtWidgets.QPushButton(self.centralwidget)
+        self.ClearButton.setGeometry(QtCore.QRect(660, 470, 91, 31))
+        self.ClearButton.setFlat(False)
+        self.ClearButton.setObjectName("ClearButton")
+        
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(220, 30, 321, 151))
         self.label_2.setText("")
@@ -320,6 +326,7 @@ class Ui_MainWindow(object):
         
         
         self.ConfirmButton.clicked.connect(self.ConfirmFunction) 
+        self.ClearButton.clicked.connect(self.ClearFunction)
 
 
         self.retranslateUi(MainWindow)
@@ -403,6 +410,7 @@ class Ui_MainWindow(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.LowerBody), _translate("MainWindow", "Lower Body"))
         self.label.setText(_translate("MainWindow", "Differential Diagnosis"))
         self.ConfirmButton.setText(_translate("MainWindow", "Confirm"))
+        self.ClearButton.setText(_translate("MainWindow", "Clear"))
 
 
     def ConfirmFunction(self):
@@ -894,6 +902,8 @@ class Ui_MainWindow(object):
            index = index + 1
        #------------------------------------------#
        
+      
+        
        global WeightVector
        Diagnosis = []
        
@@ -905,8 +915,88 @@ class Ui_MainWindow(object):
        QLineEdit.setText(self.lineEdit, Diagnosis[0])
        QLineEdit.setText(self.lineEdit_2, Diagnosis[1])
        QLineEdit.setText(self.lineEdit_3, Diagnosis[2])
+       
+  
 
-        
+
+     
+    def ClearFunction(self):
+       self.AchingMuscles.setChecked(False)
+       self.BodyAches.setChecked(False)
+       self.Chills.setChecked(False)
+       self.Fatigue.setChecked(False)
+       self.ExtremeHunger.setChecked(False)
+       self.ExtremeThirst.setChecked(False)
+       self.Fever.setChecked(False)
+       self.Irritation.setChecked(False)
+       self.LossOfEnergy.setChecked(False)
+       self.NightSweats.setChecked(False)
+       self.NumbnessTingling.setChecked(False)
+       self.PeriodicPainFluctuatingIntensity.setChecked(False)
+       self.PaleSkin.setChecked(False)
+       self.RaisedPinkRedBumps.setChecked(False)
+       self.Rash.setChecked(False)
+       self.SmallFluidFilledBlisters.setChecked(False)
+       self.ThrobbingPulsatingPain.setChecked(False)
+       self.Vomiting.setChecked(False)
+       self.Weakness.setChecked(False)
+       self.WeightLoss.setChecked(False)
+       self.BlockedNose.setChecked(False)
+       self.BlurryVision.setChecked(False)
+       self.BurningEyes.setChecked(False)
+       self.Coughing.setChecked(False)
+       self.CoughingBlood.setChecked(False)
+       self.DecreasedSenseOfTasteSmell.setChecked(False)
+       self.DifficultyConcentrating.setChecked(False)
+       self.Dizziness.setChecked(False)
+       self.Drooling.setChecked(False)
+       self.FacialPain.setChecked(False)
+       self.Headaches.setChecked(False)
+       self.IncreasedAsthmaticReactions.setChecked(False)
+       self.IncreasedTears.setChecked(False)
+       self.Insomnia.setChecked(False)
+       self.ItchyEyes.setChecked(False)
+       self.LightSensitivity.setChecked(False)
+       self.NasalCongestion.setChecked(False)
+       self.Nausea.setChecked(False)
+       self.NeckPain.setChecked(False)
+       self.PainOnOneSideOfHead.setChecked(False)
+       self.BreathingPain.setChecked(False)
+       self.PinkRedColorInWhitesEyes.setChecked(False)
+       self.RunnyNose.setChecked(False)
+       self.ScratchyThroat.setChecked(False)
+       self.ShortnessOfBreath.setChecked(False)
+       self.SinusPressure.setChecked(False)
+       self.SoreMouthMakesEatDrinkSleepHard.setChecked(False)
+       self.SoreThroat.setChecked(False)
+       self.SoundSensitivity.setChecked(False)
+       self.SwollenLymphNodes.setChecked(False)
+       self.SwollenBlueSkinUnderEyes.setChecked(False)
+       self.UrgeToRubEyes.setChecked(False)
+       self.VisionChanges.setChecked(False)
+       self.VisualAura.setChecked(False)
+       self.Wheezing.setChecked(False)
+       self.BurningSensationUrinating.setChecked(False)
+       self.CloudyFoulSmellingUrine.setChecked(False)
+       self.LegCramp.setChecked(False)
+       self.PainWhenUrinating.setChecked(False)
+       self.PainRadiatesLowerAbdomenGroin.setChecked(False)
+       self.PersistentNeedToUrinate.setChecked(False)
+       self.PinkRedBrownUrine.setChecked(False)
+       self.FrequentUrination.setChecked(False)
+       self.UrinatingSmallAmount.setChecked(False)
+       self.ChestPain.setChecked(False)
+       self.LossOfAppetite.setChecked(False)
+       self.PainInSideBackBelowRibs.setChecked(False)
+       self.RapidHeartBeat.setChecked(False)
+       
+       QLineEdit.setText(self.lineEdit, "")
+       QLineEdit.setText(self.lineEdit_2, "")
+       QLineEdit.setText(self.lineEdit_3, "")
+
+          
+
+                
 
 if __name__ == "__main__":
     import sys
@@ -916,4 +1006,4 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
-
+    
