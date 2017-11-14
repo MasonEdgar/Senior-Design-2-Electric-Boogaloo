@@ -209,24 +209,24 @@ while(stage <= AnemiaSymptoms.shape[0]):
     row = row - row_old 
     
     for item in range(len(NewList)):
-        i = 0    
+        i = 0  
+        temp = []
         while(i < stage):
+            temp.append(NewAnemia[NewList[count][i]])
             NewAnemia[NewList[count][i]] = 0
             i = i + 1
             
         #------ Algorithm Goes Here ------#  
 
         result = algo.Method1(NewAnemia)
-        
         ws1.write(row, stage, result)
-            
         row += 1
 
         #---------------------------------#
         
         i = 0
         while(i < stage):
-            NewAnemia[NewList[count][i]] = 1
+            NewAnemia[NewList[count][i]] = temp[i]
             i = i + 1
         count = count + 1
         
@@ -236,6 +236,8 @@ while(stage <= AnemiaSymptoms.shape[0]):
 wb.close()
 print("Anemia done!")   
 #----------------------------------------------------------#
+
+
 
 
 
@@ -270,24 +272,24 @@ while(stage <= BronchitisSymptoms.shape[0]):
     row = row - row_old 
     
     for item in range(len(NewList)):
-        i = 0    
+        i = 0
+        temp = []
         while(i < stage):
+            temp.append(NewBronchitis[NewList[count][i]])
             NewBronchitis[NewList[count][i]] = 0
             i = i + 1
             
         #------ Algorithm Goes Here ------#  
 
         result = algo.Method1(NewBronchitis)
-        
         ws1.write(row, stage, result)
-            
         row += 1
 
         #---------------------------------#
         
         i = 0
         while(i < stage):
-            NewBronchitis[NewList[count][i]] = 1
+            NewBronchitis[NewList[count][i]] = temp[i]
             i = i + 1
         count = count + 1
         
@@ -333,23 +335,23 @@ while(stage <= ColdSoreSymptoms.shape[0]):
     
     for item in range(len(NewList)):
         i = 0    
+        temp = []
         while(i < stage):
+            temp.append(NewColdSore[NewList[count][i]])
             NewColdSore[NewList[count][i]] = 0
             i = i + 1
             
         #------ Algorithm Goes Here ------#  
 
         result = algo.Method1(NewColdSore)
-        
         ws1.write(row, stage, result)
-            
         row += 1
 
         #---------------------------------#
         
         i = 0
         while(i < stage):
-            NewColdSore[NewList[count][i]] = 1
+            NewColdSore[NewList[count][i]] = temp[i]
             i = i + 1
         count = count + 1
         
@@ -392,24 +394,24 @@ while(stage <= ConjunctivitisSymptoms.shape[0]):
     row = row - row_old 
     
     for item in range(len(NewList)):
-        i = 0    
+        i = 0 
+        temp = []
         while(i < stage):
+            temp.append(NewConjunctivitis[NewList[count][i]])
             NewConjunctivitis[NewList[count][i]] = 0
             i = i + 1
             
         #------ Algorithm Goes Here ------#  
 
         result = algo.Method1(NewConjunctivitis)
-        
         ws1.write(row, stage, result)
-            
         row += 1
 
         #---------------------------------#
         
         i = 0
         while(i < stage):
-            NewConjunctivitis[NewList[count][i]] = 1
+            NewConjunctivitis[NewList[count][i]] = temp[i]
             i = i + 1
         count = count + 1
         
@@ -452,23 +454,23 @@ while(stage <= DiabetesSymptoms.shape[0]):
     
     for item in range(len(NewList)):
         i = 0    
+        temp = []
         while(i < stage):
+            temp.append(NewDiabetes[NewList[count][i]])
             NewDiabetes[NewList[count][i]] = 0
             i = i + 1
             
         #------ Algorithm Goes Here ------#  
 
         result = algo.Method1(NewDiabetes)
-        
         ws1.write(row, stage, result)
-            
         row += 1
 
         #---------------------------------#
         
         i = 0
         while(i < stage):
-            NewDiabetes[NewList[count][i]] = 1
+            NewDiabetes[NewList[count][i]] = temp[i]
             i = i + 1
         count = count + 1
         
@@ -513,23 +515,23 @@ while(stage <= ChickenpoxSymptoms.shape[0]):
     
     for item in range(len(NewList)):
         i = 0    
+        temp = []
         while(i < stage):
+            temp.append(NewChickenpox[NewList[count][i]])
             NewChickenpox[NewList[count][i]] = 0
             i = i + 1
             
         #------ Algorithm Goes Here ------#  
 
         result = algo.Method1(NewChickenpox)
-        
         ws1.write(row, stage, result)
-            
         row += 1
 
         #---------------------------------#
         
         i = 0
         while(i < stage):
-            NewChickenpox[NewList[count][i]] = 1
+            NewChickenpox[NewList[count][i]] = temp[i]
             i = i + 1
         count = count + 1
         
@@ -574,23 +576,23 @@ while(stage <= KidneyStonesSymptoms.shape[0]):
     
     for item in range(len(NewList)):
         i = 0    
+        temp = []
         while(i < stage):
+            temp.append(NewKidneyStones[NewList[count][i]])
             NewKidneyStones[NewList[count][i]] = 0
             i = i + 1
             
         #------ Algorithm Goes Here ------#  
 
         result = algo.Method1(NewKidneyStones)
-        
         ws1.write(row, stage, result)
-            
         row += 1
 
         #---------------------------------#
         
         i = 0
         while(i < stage):
-            NewKidneyStones[NewList[count][i]] = 1
+            NewKidneyStones[NewList[count][i]] = temp[i]
             i = i + 1
         count = count + 1
         
@@ -632,24 +634,24 @@ while(stage <= MigrainesSymptoms.shape[0]):
     row = row - row_old 
     
     for item in range(len(NewList)):
-        i = 0    
+        i = 0   
+        temp = []
         while(i < stage):
+            temp.append(NewMigraines[NewList[count][i]])
             NewMigraines[NewList[count][i]] = 0
             i = i + 1
             
         #------ Algorithm Goes Here ------#  
 
         result = algo.Method1(NewMigraines)
-        
         ws1.write(row, stage, result)
-            
         row += 1
 
         #---------------------------------#
         
         i = 0
         while(i < stage):
-            NewMigraines[NewList[count][i]] = 1
+            NewMigraines[NewList[count][i]] = temp[i]
             i = i + 1
         count = count + 1
         
@@ -692,24 +694,24 @@ while(stage <= PollenAllergySymptoms.shape[0]):
     row = row - row_old 
     
     for item in range(len(NewList)):
-        i = 0    
+        i = 0 
+        temp = []
         while(i < stage):
+            temp.append(NewPollenAllergy[NewList[count][i]])
             NewPollenAllergy[NewList[count][i]] = 0
             i = i + 1
             
         #------ Algorithm Goes Here ------#  
 
         result = algo.Method1(NewPollenAllergy)
-        
         ws1.write(row, stage, result)
-            
         row += 1
 
         #---------------------------------#
         
         i = 0
         while(i < stage):
-            NewPollenAllergy[NewList[count][i]] = 1
+            NewPollenAllergy[NewList[count][i]] = temp[i]
             i = i + 1
         count = count + 1
         
@@ -752,24 +754,24 @@ while(stage <= TuberculosisSymptoms.shape[0]):
     row = row - row_old 
     
     for item in range(len(NewList)):
-        i = 0    
+        i = 0 
+        temp = []
         while(i < stage):
+            temp.append(NewTuberculosis[NewList[count][i]])
             NewTuberculosis[NewList[count][i]] = 0
             i = i + 1
             
         #------ Algorithm Goes Here ------#  
 
         result = algo.Method1(NewTuberculosis)
-        
         ws1.write(row, stage, result)
-            
         row += 1
 
         #---------------------------------#
         
         i = 0
         while(i < stage):
-            NewTuberculosis[NewList[count][i]] = 1
+            NewTuberculosis[NewList[count][i]] = temp[i]
             i = i + 1
         count = count + 1
         
@@ -779,3 +781,4 @@ while(stage <= TuberculosisSymptoms.shape[0]):
 wb.close()
 print("Tuberculosis done!")    
 #---------------------------------------------------------------------#
+
