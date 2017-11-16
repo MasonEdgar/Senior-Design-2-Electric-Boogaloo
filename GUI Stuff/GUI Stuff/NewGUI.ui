@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_2">
     <property name="leftMargin">
@@ -112,18 +115,18 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>623</width>
-         <height>808</height>
+         <width>621</width>
+         <height>862</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout">
-        <item row="1" column="0">
+        <item row="0" column="0">
          <widget class="QTabWidget" name="tabWidget">
           <property name="autoFillBackground">
            <bool>false</bool>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(250, 255, 248)</string>
+           <string notr="true"/>
           </property>
           <property name="currentIndex">
            <number>0</number>
@@ -399,7 +402,7 @@
             </property>
             <property name="font">
              <font>
-              <pointsize>13</pointsize>
+              <pointsize>8</pointsize>
              </font>
             </property>
             <property name="layoutDirection">
@@ -423,6 +426,25 @@
             </property>
             <property name="text">
              <string>Night Sweats</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_2">
+            <property name="geometry">
+             <rect>
+              <x>300</x>
+              <y>0</y>
+              <width>291</width>
+              <height>151</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>SD_Logo.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
             </property>
            </widget>
           </widget>
@@ -866,6 +888,8 @@
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../../../../../Desktop/GUI_Back.qrc"/>
+ </resources>
  <connections/>
 </ui>
