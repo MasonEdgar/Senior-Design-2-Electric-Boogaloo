@@ -493,7 +493,7 @@
              </widget>
             </item>
             <item row="1" column="0">
-             <widget class="QCheckBox" name="SinusPressue">
+             <widget class="QCheckBox" name="SinusPressure">
               <property name="text">
                <string>Sinus Pressure</string>
               </property>
