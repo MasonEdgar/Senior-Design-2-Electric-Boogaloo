@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>660</width>
-    <height>560</height>
+    <width>692</width>
+    <height>578</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -115,8 +115,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>621</width>
-         <height>862</height>
+         <width>670</width>
+         <height>808</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout">
@@ -219,7 +219,7 @@
             <property name="geometry">
              <rect>
               <x>20</x>
-              <y>290</y>
+              <y>330</y>
               <width>211</width>
               <height>20</height>
              </rect>
@@ -235,7 +235,7 @@
             <property name="geometry">
              <rect>
               <x>20</x>
-              <y>350</y>
+              <y>390</y>
               <width>311</width>
               <height>20</height>
              </rect>
@@ -251,7 +251,7 @@
             <property name="geometry">
              <rect>
               <x>20</x>
-              <y>310</y>
+              <y>350</y>
               <width>251</width>
               <height>20</height>
              </rect>
@@ -299,7 +299,7 @@
             <property name="geometry">
              <rect>
               <x>20</x>
-              <y>270</y>
+              <y>310</y>
               <width>221</width>
               <height>20</height>
              </rect>
@@ -315,7 +315,7 @@
             <property name="geometry">
              <rect>
               <x>20</x>
-              <y>330</y>
+              <y>370</y>
               <width>241</width>
               <height>20</height>
              </rect>
@@ -402,7 +402,7 @@
             </property>
             <property name="font">
              <font>
-              <pointsize>8</pointsize>
+              <pointsize>13</pointsize>
              </font>
             </property>
             <property name="layoutDirection">
@@ -445,6 +445,38 @@
             </property>
             <property name="scaledContents">
              <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="LossOfEnergy">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>290</y>
+              <width>181</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="text">
+             <string>Loss of Energy</string>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="WeightLoss">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>270</y>
+              <width>211</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="text">
+             <string>Weight Loss</string>
             </property>
            </widget>
           </widget>
